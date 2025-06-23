@@ -1,0 +1,20 @@
+ga key code component
+
+- plan
+fastestai-api/src/fastestai/agents/team/plan/plan.py
+- agent creation
+fastestai-api/src/fastestai/agents/nlo.py
+- chat external api
+fastestai-api/src/fastestai/api/routers/chat.py
+- chat preparetion
+fastestai-api/src/fastestai/chat/auto.py
+- dispatch 
+fastestai-api/src/fastestai/chat/dispatch.py
+
+- memory 
+fastestai-api/src/fastestai/memory/memory.py
+
+- runtime enhancement  AgentCard(A2A)
+fastestai-playground/src/fastestai_playground/playgroup_app/agent_card_utils.py
+
+key agent framework using Autogen
