@@ -1,0 +1,20 @@
+Tool typical requirement from tool chaining , so that it could improve success rate.
+
+Tools might encounter tool size too large , need generate concrete tool and  preview tool .(exceed LLM token limit)
+Tools call might fail, need to switch alternative tool by searching for similar tool.
+ - one function got error for  4xx error , 500 error either require api key , 429 error /etc , then switch another alternative
+Tools might also need some pre post operation ,such as :
+ - case sensitive funcation parameter, need to lowercase the funcation parameter,  
+ - for more friendly converter (crypto token address convert to token symbol)
+
+my solution proposal:
+steps:
+- user's input with task_id as context, user's question
+- agent call tool1, save agent call result1 to db during MCP tool call stage(in Omnimcp-be)
+- agent call tool2, save agent call result2 to db during MCP tool call stage(in Omnimcp-be)
+- agent use tool3 with pandas.ai use tool to query context to gather back the context to generate code using LLM.(which is with new tool)
+  - typical glue code , given user's requirentment , tool call result1 , result2.
+    - such as convert address to token    
+  - with the code execution return as tool call result 
+- continue the agent run execution
+

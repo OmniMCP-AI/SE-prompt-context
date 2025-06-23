@@ -1,0 +1,157 @@
+# Product Features Summary
+
+**Architect:** [ProcessOn Link](https://www.processon.com/view/link/68466857fd036b1f4260e9b1?cid=68466822170d3978c9ff2c54)
+
+OmniMCP.ai is an AI-driven platform for creating and managing Web3-focused agents and applications, inspired by V0.dev, Wordware, and Websim. Key features include:
+
+- **Agent/App Creation:** 
+  - Intuitive Playground interface for both non-technical and technical users to build agents/apps using natural language prompts, with plan generation and versioning.
+  
+- **MCP Tool Layer:** 
+  - Integrates APIs (e.g., Dune, Footprint, GMGN) and internal tools for crypto analytics/operations, with schema-based tool combination.
+
+- **Runtime Execution:** 
+  - Autogen-based framework for single/team agent tasks, supporting private data and long-running crypto tasks.
+
+- **User Interaction:** 
+  - Chat interface for non-technical users (80% of audience), white-label support, and social sharing of apps/agents.
+
+- **Analytics:** 
+  - Limited dashboard integration (Dune/Footprint); runtime chart generation planned.
+
+- **Crypto Focus:** 
+  - Specialized for token analysis, wallet data, and chain operations with entity recognition.
+
+- **Credit System:** 
+  - Free users have limited credits; higher quotas for SuperGrok/x.com premium users.
+
+- **Target Users:** 
+  - 20% builders (often non-technical), 80% users interacting with pre-built apps.
+
+---
+
+# Product Features Summary (Long)
+
+OmniMCP.ai is designed to enable the creation, management, and execution of Web3-focused agents and applications, inspired by V0.dev’s rapid creation, Wordware’s accessibility, and Websim’s social sharing. It integrates an agent framework with a robust tool layer (OmniMCP) to support automation and analytics, particularly for cryptocurrency use cases. Below are the key features:
+
+## Agent and App Creation
+
+- **Playground Interface:** 
+  - A Notion-like interface for non-technical and technical users to create agents and apps using natural language prompts. Supports agent creation, editing, and versioning.
+
+- **Plan Generation:** 
+  - Generates executable plans based on user intent, selecting relevant agents and tools, with streaming APIs for real-time feedback.
+
+- **App Builder:** 
+  - Enables building chatbot-like apps by combining multiple agents, with support for predefined templates.
+
+## MCP Tool Layer
+
+- **Tool Integration:** 
+  - Integrates external APIs (e.g., Dune, Footprint, Chainbase, GMGN) and internal tools via OpenAPI standards for data retrieval and processing.
+
+- **Tool Combination:** 
+  - Allows users to combine tools into new MCP servers for enhanced functionality.
+
+- **Tool Knowledge:** 
+  - Generates input/output schemas and sample cases to improve tool usability, though coverage is limited (1-10%).
+
+## Runtime Execution
+
+- **Agent Framework:** 
+  - Built on Autogen, supporting single-agent ReAct and team-based execution for complex tasks, handling crypto-specific tasks like token analysis and wallet data retrieval.
+
+- **Private Data Support:** 
+  - Enables integration of private data for context-aware responses, though manual configuration is required.
+
+- **Long-Running Tasks:** 
+  - Supports tasks requiring extended execution, such as indexing crypto entities.
+
+- **Agent2Agent Compatibility:** 
+  - Uses Agentcard to enhance agent capabilities and reduce user workload by injecting domain knowledge and tool knowledge (including examples and input/output to enhance understanding and success rates).
+
+## User Interaction
+
+- **User Chat Interface:** 
+  - Allows non-technical users (80% of target audience) to interact with pre-built apps via a chat interface, supporting multi-session dialogues and chat history.
+
+- **White-Label Support:** 
+  - Provides custom interfaces for specific use cases (e.g., GMGN, Dune), restricted to designated apps/agents.
+
+- **Social Sharing:** 
+  - Apps and agents can be shared via links with access controls for public or private use.
+
+## Analytics and Visualization
+
+- **Dashboard Integration:** 
+  - Connects with Dune and Footprint dashboards for structured data retrieval, though parameter support is limited.
+
+- **Chart Generation:** 
+  - Planned feature for runtime chart creation using tools like ECharts.
+
+## Targeted Features for Crypto
+
+- **Crypto Knowledge:** 
+  - Specialized for crypto analysis (e.g., token price, wallet balance) and operations (e.g., chain transactions).
+
+- **Entity Recognition:** 
+  - Supports entity linking and rephrasing for improved query understanding in crypto contexts.
+
+## Credit System
+
+- Free users have limited chat credits, configurable in the database. Subscribed users (e.g., SuperGrok, x.com premium) access higher quotas.
+
+## Target Users
+
+- **Builders (20%):** 
+  - Often non-technical, creating agents/apps for specific use cases (e.g., crypto analysis, meme coin tracking).
+
+- **Users (80%):** 
+  - General users interacting with pre-built apps via chat interfaces for Web3 research and operations.
+
+---
+
+# Comparison with UniQ
+
+**UniQ** offers a more mature platform for Web3 analytics, with key differences:
+
+- **Tool Reliability:** 
+  - UniQ’s tools are more stable, with consistent input/output handling. OmniMCP struggles with tool failures (e.g., API downtime, schema errors).
+
+- **Agent Stability:** 
+  - UniQ’s agents execute tasks reliably with predictable tool calls. OmniMCP’s agents face inconsistent tool selection and execution failures.
+
+- **Use Case Coverage:** 
+  - UniQ effectively covers crypto analytics. OmniMCP progresses but faces gaps in dashboard integration (e.g., Dune’s SQL limitations) and tool availability.
+
+- **Automation:** 
+  - UniQ likely has a more automated tool testing and agent creation pipeline. OmniMCP’s tool knowledge generation is slow and requires manual intervention.
+
+## Tool Knowledge Challenges
+
+- **Issue:** 
+  - Tool knowledge is managed separately for agent creation and runtime, causing inefficiencies and mismatches (e.g., tools not aligning with use cases).
+
+- **Action:** 
+  - Merge tool knowledge into a unified framework using structured schemas (e.g., triplets, tags) stored in a scalable database (e.g., MongoDB, graph database). Integrate with agent creation and runtime for consistent tool selection.
+
+- **Status:** 
+  - On hold, pending further discussion.
+
+## Conclusion
+
+OmniMCP.ai combines V0’s rapid creation, Wordware’s accessible interface, and Websim’s sharing capabilities to build a Web3 agent platform. Compared to UniQ, it lags in tool reliability, agent stability, and dashboard integration. Critical issues include stabilizing agent execution, improving tool reliability, and enhancing dashboard support. Key improvements needed are runtime chart generation, private data automation, and unified tool knowledge management. Prioritizing these will align OmniMCP closer to UniQ’s benchmark and enhance user experience for builders and users.
+
+---
+
+# Stack
+
+- Key agent framework using Autogen (in `fastest-api` folder)
+- MCPTool for tool calls (in `omnimcp-be` and `omnimcp-api-proxy` folder)
+- User chat interface and agent studio (build and test app/agent) (in `fastest-playground` folder)
+- Deployment architecture
+
+- workflow for user chat
+use disptch to find best match agent/app
+ - if not found, will replan , find tools to answer the question
+    - if still could not planned agents will use research agent with search tool(google/perplexity/twitter search tool) try to satifsfy user's query
