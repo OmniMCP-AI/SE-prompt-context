@@ -18,3 +18,30 @@ steps:
   - with the code execution return as tool call result 
 - continue the agent run execution
 
+
+
+
+---- v2 
+
+stack : using autogen and mcptool for  multiple agents system
+requirement :
+Tool typical requirement from tool chaining , so that it could improve success rate.
+Tools might also need some pre post operation ,such as :
+ - for more friendly converter (crypto token address convert to token symbol)
+
+my solution proposal:
+steps:
+
+- prepare stage:
+  - user's input with task_id as context, user's question
+  - inject a new convet_tool for the convert since we already known tool1 output address, probably need to convert address to symbol tool
+
+- agent call tool1, save agent call result1 to db during MCP tool call stage(in Omnimcp-be)
+- agent call convert_tool for the convertion 
+  -- it will call search_best_tool according to user's input, and tool1 result schema 
+  -- hopefully it will select the convert_tool  via search_best_tool
+  -- call the search_best_tool result via function call 
+- do the result of the agent run or rest of function call
+
+
+
