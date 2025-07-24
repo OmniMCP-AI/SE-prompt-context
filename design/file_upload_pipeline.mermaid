@@ -1,0 +1,28 @@
+graph TD
+    A[User Upload File] --> B0["File parser"]
+    B0 --> B[Pre-processor]
+    
+    B -->|Raw| C[Object Storage]
+    B -->|Structure| D[Database]
+    B -->|Query| D
+    B -->|Vector| E[Vector Store]
+    B -->|Semantic| E
+    B --> CC[Context]
+    H[Scheduler] -->|"Need Refreshed Content"| B0
+    H -->|URI| G
+    F[User's query] -->|"Query(Text) or URI"| G[Multi-Retrievers]
+    G --> C
+    G --> D
+    G --> E
+    G --> CC
+
+    subgraph Storage Pipeline
+        
+        B0
+        B
+        C
+        D
+        E
+        CC
+    end
+  

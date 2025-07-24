@@ -1,0 +1,25 @@
+flowchart TD
+    A[Execute Action] --> B[Build action context]
+    B --> C[Create LLM prompt with action description]
+    C --> D[Stream LLM response]
+    D --> E{Response Type?}
+    E -->|Tool Call| F[Extract tool calls]
+    E -->|Text Response| G[Save text output]
+    F --> H[Validate tool calls]
+    H --> I{Valid tool calls?}
+    I -->|No| J[Log error and continue]
+    I -->|Yes| K[Execute each tool]
+    K --> L[Tool execution successful?]
+    L -->|No| M[Log tool error]
+    L -->|Yes| N[Collect tool results]
+    M --> O[Continue with next tool]
+    N --> O
+    O --> P{More tools?}
+    P -->|Yes| K
+    P -->|No| Q[Combine all results]
+    J --> Q
+    G --> Q
+    Q --> R[Create ActionOutputs]
+    R --> S[Save to workflow state]
+    S --> T[Yield ActionOutput event]
+    T --> U[Action completed]

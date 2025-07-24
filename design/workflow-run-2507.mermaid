@@ -1,0 +1,45 @@
+flowchart TD
+    A[Client Request: POST /workflow/run] --> B[Validate RunWorkflow Model]
+    B --> C{Validation Pass?}
+    C -->|No| D[Return Validation Error]
+    C -->|Yes| E[Clear structlog context]
+    E --> F[Bind task_id to context]
+    F --> G[Log request info]
+    G --> H{Request Type?}
+    
+    H -->|workflow provided| I[Call WorkflowRunner.run_workflow]
+    H -->|rerun_action provided| J[Call WorkflowRunner.rerun_workflow_action]
+    
+    I --> K[Create WorkflowRunner instance]
+    K --> L[Initialize workflow]
+    L --> M[Prepare tools]
+    M --> N[Save initial state to MongoDB]
+    N --> O[Get all actions]
+    O --> P{More actions to execute?}
+    P -->|Yes| Q[Get next action]
+    P -->|No| R[Workflow completed]
+    Q --> S[Check action dependencies]
+    S --> T{Dependencies satisfied?}
+    T -->|No| U[Wait for dependencies]
+    T -->|Yes| V[Execute action]
+    U --> P
+    V --> W[LLM tool call]
+    W --> X{Tool calls exist?}
+    X -->|Yes| Y[Execute tools]
+    X -->|No| Z[Save action outputs]
+    Y --> Z
+    Z --> AA[Save to MongoDB]
+    AA --> BB[Yield WorkflowEvent]
+    BB --> P
+    
+    J --> CC[Load workflow state from MongoDB]
+    CC --> DD{State found?}
+    DD -->|No| EE[Return error]
+    DD -->|Yes| FF[Clear dependent action states]
+    FF --> GG[Re-execute specific action]
+    GG --> V
+    
+    R --> HH[Stream final result]
+    EE --> HH
+    HH --> II[Return EventSourceResponse]
+    II --> JJ[Client receives Server-Sent Events]

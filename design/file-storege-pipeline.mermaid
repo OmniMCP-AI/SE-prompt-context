@@ -1,0 +1,22 @@
+graph TD
+    A[Input] --> B0["File parser"]
+    B0 --> B[Pre-processor]
+    
+    B -->|Raw| C[Object Storage]
+    B -->|Structure| D[Database]
+    B -->|Query| D
+    B -->|Vector| E[Vector Store]
+    B -->|Semantic| E
+    F[Multi-Retrievers] --> G[Access Manager]
+    G --> C
+    G --> D
+    G --> E
+    subgraph Storage Pipeline
+        A
+        B0
+        B
+        C
+        D
+        E
+    end
+  

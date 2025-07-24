@@ -1,0 +1,52 @@
+flowchart TD
+ subgraph KnowledgeUsage["Knowledge Base Usage"]
+        K2["Search Knowledge"]
+        KU1["Market Analysis"]
+        KU2["Technical Documentation"]
+        KU3["User Guides"]
+  end
+ subgraph PrivateUsage["Private Data Usage"]
+        P1["User Private Data"]
+        PU1["User Preferences"]
+        PU2["API Keys"]
+        PU3["Personal History"]
+  end
+ subgraph ContextUsage["Context Usage"]
+        C1["User Context"]
+        C2["App Context"]
+        C3["Agent Context"]
+        C4["Current Context"]
+        CU1["Conversation History"]
+        CU2["User Goals"]
+        CU4["Tool Selection"]
+        CU5["Session Context"]
+        CU6["Memory"]
+  end
+ subgraph Scenarios["Usage Scenarios"]
+        Task["Task Input"]
+        SQ["Scenario: NLU"]
+        ST["Scenario: Tool Execution"]
+        SR["Scenario: RunAgent"]
+  end
+
+  
+    K2 --> KU1 & KU2 & KU3
+    P1 --> PU1 & PU2 & PU3
+    C4 --> CU2
+    CU5 --> CU6 & CU1
+    C3 --> CU4
+    Task --> SQ & ST & SR
+    SQ -- Load User Context --> C1
+    ST -- Check Private Data --> P1
+    C2 -- Query Knowledge --> K2
+    SR --> C1 & C2 & C3 & C4 & CU5
+    ST -- Check Tool Context --> CU4
+    SR -- Check History --> CU1
+
+    style KnowledgeUsage fill:#dfd,stroke:#333
+    style PrivateUsage fill:#fdd,stroke:#333
+    style ContextUsage fill:#ddf,stroke:#333
+    style Scenarios fill:#fbb,stroke:#333,stroke-width:2px
+
+
+

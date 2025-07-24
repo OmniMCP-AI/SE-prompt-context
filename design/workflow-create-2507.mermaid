@@ -1,0 +1,22 @@
+flowchart TD
+    A[Client Request: POST /workflow] --> B[Validate CreateWorkflow Model]
+    B --> C{Validation Pass?}
+    C -->|No| D[Return Validation Error]
+    C -->|Yes| E[Clear structlog context]
+    E --> F[Bind task_id to context]
+    F --> G[Log request info]
+    G --> H[Create Context with SessionContext]
+    H --> I[Call create_workflow function]
+    I --> J[Prepare context]
+    J --> K[Get available tools]
+    K --> L[Generate workflow prompt]
+    L --> M[Stream LLM response]
+    M --> N{Chunk Type?}
+    N -->|LLMChunk| O[Create ContentChunk with event_type='define_workflow']
+    N -->|DataChunk| P[Create ContentChunk with workflow data]
+    O --> Q[Yield chunk as JSON]
+    P --> Q
+    Q --> R{More chunks?}
+    R -->|Yes| M
+    R -->|No| S[Return EventSourceResponse]
+    S --> T[Client receives Server-Sent Events]
