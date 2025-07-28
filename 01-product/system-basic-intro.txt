@@ -1,0 +1,23 @@
+# Product goal: 
+We're building a zero coding(vibe-coding) platform mostly for web3/finance. Use V0's  creation experience to implement wordware, with websim's social mode . we first build agent framework with a few tools mostly need by agent with openAPI standard, but realised   that AI execution especially for automation need more tools rather than just brilliant idea and analysis, then also build the tools layer(OmniMCP).
+
+Background:
+Websim is an innovative AI-powered platform that lets you create and share interactive games and web pages with ease. By simply entering text prompts, users can generate fully functional, customizable websites and simulations, making web development accessible to everyone, from beginners to seasoned developers.
+v0.dev is an AI-powered tool by Vercel that transforms simple text prompts or images into production-ready React code, using modern frameworks like Next.js, Tailwind CSS, and shadcn/ui. Ideal for developers, designers, and product managers, it streamlines rapid prototyping and UI creation, allowing users to quickly build and deploy web applications.
+Wordware is an AI development platform that simplifies building and deploying complex AI agents and applications using natural language prompts. Its intuitive Notion-like interface makes it accessible for non-technical users and engineers alike, supporting rapid prototyping, one-click API deployment, and over 2,000 integrations
+OmniMCP.ai is an AI-driven platform that enhances user interface interactions by integrating Microsoft OmniParser and Model Context Protocol (MCP). It empowers AI models with advanced visual understanding and precise action execution, enabling seamless automation of tasks like UI navigation and data querying. Ideal for developers and businesses, OmniMCP streamlines workflows with real-time, AI-ready data access
+
+
+System contains server part:
+Reasoning & Planning
+Scenario for Build an app (chatbot like) using multiple agent
+Memory context(NLU:Entity linking/rephraser)
+Agent framework based on autogen
+Allow user chat with the app build by app builder (usually non-tech user)
+Private data support for context awareness
+Knowledge for crypto  specialize for crypto analysis/operation
+
+Target user:
+20% are Builder mostly non-tech user
+80% are User: chat with those app already built by builder 
+
