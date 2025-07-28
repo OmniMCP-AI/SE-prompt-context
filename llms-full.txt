@@ -2,13 +2,15 @@
 
 **Architect:** [ProcessOn Link](https://www.processon.com/view/link/68466857fd036b1f4260e9b1?cid=68466822170d3978c9ff2c54)
 
-OmniMCP.ai is an AI-driven platform for creating and managing Web3-focused agents and applications, inspired by V0.dev, Wordware, and Websim. Key features include:
+MAYBE.ai is an AI-driven answer platform for creating and managing Web3-focused agents and applications, inspired by V0.dev, Wordware, and Websim. 
+Based on OmniMCP which is a decentralized "tool supermarket" that allows intelligent agents (Agents) to easily connect with various tools and data sources. 
+Key features include:
 
 - **Agent/App Creation:** 
   - Intuitive Playground interface for both non-technical and technical users to build agents/apps using natural language prompts, with plan generation and versioning.
   
 - **MCP Tool Layer:** 
-  - Integrates APIs (e.g., Dune, Footprint, GMGN) and internal tools for crypto analytics/operations, with schema-based tool combination.
+  - Based on OmniMCP.ai Integrates APIs (e.g., Dune, Footprint, GMGN) and internal tools for crypto analytics/operations, with schema-based tool combination.
 
 - **Runtime Execution:** 
   - Autogen-based framework for single/team agent tasks, supporting private data and long-running crypto tasks.
@@ -19,8 +21,8 @@ OmniMCP.ai is an AI-driven platform for creating and managing Web3-focused agent
 - **Analytics:** 
   - Limited dashboard integration (Dune/Footprint); runtime chart generation planned.
 
-- **Crypto Focus:** 
-  - Specialized for token analysis, wallet data, and chain operations with entity recognition.
+- **Crypto and Finance Focus:** 
+  - Specialized for token analysis, wallet data, and chain operations with entity recognition. will later expand to Finance Domain
 
 - **Credit System:** 
   - Free users have limited credits; higher quotas for SuperGrok/x.com premium users.
@@ -32,7 +34,7 @@ OmniMCP.ai is an AI-driven platform for creating and managing Web3-focused agent
 
 # Product Features Summary (Long)
 
-OmniMCP.ai is designed to enable the creation, management, and execution of Web3-focused agents and applications, inspired by V0.dev’s rapid creation, Wordware’s accessibility, and Websim’s social sharing. It integrates an agent framework with a robust tool layer (OmniMCP) to support automation and analytics, particularly for cryptocurrency use cases. Below are the key features:
+MAYBE.ai is designed to enable the creation, management, and execution of Web3-focused agents and applications, inspired by V0.dev’s rapid creation, Wordware’s accessibility, and Websim’s social sharing. It integrates an agent framework with a robust tool layer (OmniMCP) to support automation and analytics, particularly for cryptocurrency use cases. Below are the key features:
 
 ## Agent and App Creation
 
@@ -111,22 +113,6 @@ OmniMCP.ai is designed to enable the creation, management, and execution of Web3
 
 ---
 
-# Comparison with UniQ
-
-**UniQ** offers a more mature platform for Web3 analytics, with key differences:
-
-- **Tool Reliability:** 
-  - UniQ’s tools are more stable, with consistent input/output handling. OmniMCP struggles with tool failures (e.g., API downtime, schema errors).
-
-- **Agent Stability:** 
-  - UniQ’s agents execute tasks reliably with predictable tool calls. OmniMCP’s agents face inconsistent tool selection and execution failures.
-
-- **Use Case Coverage:** 
-  - UniQ effectively covers crypto analytics. OmniMCP progresses but faces gaps in dashboard integration (e.g., Dune’s SQL limitations) and tool availability.
-
-- **Automation:** 
-  - UniQ likely has a more automated tool testing and agent creation pipeline. OmniMCP’s tool knowledge generation is slow and requires manual intervention.
-
 ## Tool Knowledge Challenges
 
 - **Issue:** 
@@ -144,7 +130,7 @@ OmniMCP.ai combines V0’s rapid creation, Wordware’s accessible interface, an
 
 ---
 
-# Stack
+# Tech Stack
 
 - Key agent framework using Autogen (in `fastest-api` folder)
 - MCPTool for tool calls (in `omnimcp-be` and `omnimcp-api-proxy` folder)
@@ -155,3 +141,24 @@ OmniMCP.ai combines V0’s rapid creation, Wordware’s accessible interface, an
 use disptch to find best match agent/app
  - if not found, will replan , find tools to answer the question
     - if still could not planned agents will use research agent with search tool(google/perplexity/twitter search tool) try to satifsfy user's query
+
+  
+## Building Agent Page (Playground Interface)
+The "Building Agent" page in MAYBE.ai’s Playground provides an intuitive, interactive environment for users to create, configure, and test AI agents tailored for Web3 and crypto-focused tasks. This page is designed for both technical and non-technical users, supporting rapid prototyping and deployment of agents.
+Key Features
+Agent Creation & Configuration:
+Users can define new agents by specifying their name, description, and core prompt. The prompt editor supports detailed role and workflow instructions, enabling precise agent behavior customization.
+Tool Selection:
+The interface allows users to select and integrate tools (APIs, data sources, or internal functions) that the agent can use. Tools are presented with clear input/output schemas and sample use cases to guide selection.
+Versioning & Plan Generation:
+Each agent can have multiple versions. The system can auto-generate execution plans based on user intent, ensuring the agent is equipped with the right tools and logic.
+Test Run Panel:
+Users can interactively test the agent by entering sample queries. The right panel displays the agent’s response, including formatted outputs, summaries, and actionable insights.
+Prompt & Workflow Editing:
+The prompt section supports Markdown formatting, making it easy to structure role descriptions, goals, and step-by-step workflows for the agent.
+Related Suggestions:
+The interface provides suggestions for feature enhancements, such as language selection, metadata retrieval, or improved transcript formatting, to inspire further agent development.
+Social Sharing & Access Control:
+Agents can be saved, shared, or set to private, supporting collaborative development and controlled deployment.
+Example Use Case
+For instance, the "YouTubeTranscriptRetriever" agent is configured to fetch and format YouTube video transcripts. The workflow is clearly outlined in the prompt, and users can test the agent by providing a YouTube URL or ID, immediately seeing the formatted transcript in the output panel.

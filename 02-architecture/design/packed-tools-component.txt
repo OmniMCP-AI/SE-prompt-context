@@ -1,0 +1,31 @@
+ omnimcp.ai has a brunch of tools with categories tags likes: 
+ DeFi & Trading, Cryptocurrency, Blockchain, Memecoins, Social & Sentiment, NFT & GameFi, Search, Data Tools, Media & Content, Communication, Wallet, Financial, 
+ but when use in realword cases such as using it for manage 1k CV in HR system for 
+  storage and find suitable candidate or query candidate either by NL or by filter with UI 
+  this scenario seems a bit complex for non technical user or those who are not familar with system
+
+i need to design tool usage for best practise for building agents swarm  or app for this scenario.
+my propose for the pipeline:
+- write to system 
+    - single files once upload will  :
+        - store is OSS as rawfile 
+        - parse to text  return as oss link 
+        - store to DB(MongoDB/SQL database) as parsed text         
+        - meanwhile this file will persist to VectorDB like qdrant 
+    by default process this pipeline , but i'm not sure about this :
+       when and what will save to nosql/sql/vector, 
+       according to different files type /file context seems might be different answers.
+       such as for stureture data , probably need sql like db, but this also affect the read from system stages
+
+    
+- read from system
+    - according to user nature lanuage or interatc with UI passed filter to system 
+      then query DB using RAG from VectorDB and query from DB(nosql or sql) 
+        to retrivele single or multiple file from system     
+        this case need use get_private_knowledge tools 
+- when run trigger schedule
+    -  fetch muliple file form system 
+        run a for loop (unimplemented) to run agent workflow 
+
+     
+- how to build a packed tools(when upload file , usually need ) for this scenario 

@@ -1,0 +1,72 @@
+# Building AI Agents with AI Primitives
+
+## Introduction
+Well, hello there! I am Ahmed, and I'm going to vibe code an AI agent built with AI primitives while I deliver this talk. 
+
+## Common AI Agents in Production
+One of the most common AI agents we've seen in production is the chatbot. You're trying to chat with data, as all LLMs are self-attention algorithms. 
+
+### Vibe Coding an AI Agent
+You go to Chai and say something like "chat with PDF," and let's see what happens. Chai is now going to vibe code an AI agent for you, building it on top of AI primitives instead of an AI framework.
+
+## About Me
+- Look at Perplexity, Cursor, V0ero, Lovable, Bold, and even now Chai.
+- A common theme across all these production-ready agents is that they are not built on top of any AI frameworks. Frameworks can be bloated, slow, and filled with unnecessary abstractions.
+
+### My Background
+I am Ahmed. I've been around the block for quite a while. If you use WordPress, Next.js, Node.js, or React, you have probably used my code. I have contributed to hundreds of open-source packages, mostly automation CLIs with Node.js, and created a shades of purple code theme downloaded millions of times.
+
+## Why Primitives?
+Primitives have a native ability to work well in production. For example, Amazon S3 is a low-level primitive for uploading and downloading data, scaling massively without a bloated framework.
+
+## My Journey with LLMs
+My journey in LLMs started in 2020 when Greg Brockman gave me access to GPT-3. I began building something like GitHub Copilot, which launched in 2021.
+
+### Defining AI Agents
+AI agents represent a new way of writing code. Everything we know about coding projects is changing due to AI and agents. 
+
+## Building Blocks
+Instead of building complex frameworks, we should focus on small, useful building blocks (primitives) that can be used across a stack.
+
+### The Role of Engineers
+Most engineers are transitioning into AI engineers, shipping products with AI. At Langbase, we aim to improve their experience by providing the fastest way to build production-ready AI agents.
+
+## Pain Points in AI Agent Development
+Many start with a painful process of using a framework filled with obscure abstractions, making debugging difficult. Instead, we advocate for building on predefined, scalable AI primitives.
+
+### The Importance of Memory
+Memory is an AI primitive that can store terabytes of data, enabling the creation of serverless AI agents that do heavy lifting automatically.
+
+## Agent Architectures
+In this talk, I will share eight different AI agent architectures built purely with AI primitives.
+
+### Example: Chat with PDF
+We create a memory for storing a PDF, which will have a vector store, and an AI agent (LLM) used to ask questions from this PDF.
+
+## Using AI Primitives
+1. **Memory**: Where user input and questions are stored.
+2. **Parser**: Converts PDF files to text.
+3. **Chunker**: Splits text into small pieces for similarity searches.
+
+### Example Implementation
+We will upload several PDF files and see how the agent generates answers.
+
+## Common Architectures
+1. **Augmented LLM**: An agent that generates output based on input, with access to tools, threads, and memory.
+2. **Prompt Chaining and Composition**: Using multiple agents to create an output based on input.
+3. **Agent Router**: A router that decides which agent to call next based on the task.
+
+### Orchestrator Agent
+An orchestrator agent generates subtasks for worker agents to solve a problem, which is then synthesized by another agent.
+
+## Evaluator and Optimizer
+An evaluator agent generates a response and provides feedback on it, improving the output.
+
+## Conclusion
+Now that you know these AI primitive patterns, you can build 80% of the most complicated AI agents. 
+
+### Final Thoughts
+All production agents are not built on top of frameworks. The question is: what good does a framework do you in a fast-moving space where new paradigms, LLMs, and problems are constantly emerging?
+
+### Leverage AI Primitives
+Instead of relying on bloated frameworks, build your AI agents on top of robust AI primitives. You can either create these primitives yourself or utilize the pre-built ones available from various companies, including Langbase.
