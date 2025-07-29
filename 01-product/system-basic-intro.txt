@@ -1,5 +1,5 @@
 # Product goal: 
-We're building a zero coding(vibe-coding) platform mostly for web3/finance. Use V0's  creation experience to implement wordware, with websim's social mode . we first build agent framework with a few tools mostly need by agent with openAPI standard, but realised   that AI execution especially for automation need more tools rather than just brilliant idea and analysis, then also build the tools layer(OmniMCP).
+We're building a zero coding(vibe-coding) platform mostly for prosumer. Use V0's  creation experience to implement wordware, with websim's social mode . we first build agent framework with a few tools mostly need by agent with openAPI standard, but realised  that AI execution especially for automation need more tools rather than just brilliant idea and analysis, then also build the tools layer(OmniMCP).
 
 Background:
 Websim is an innovative AI-powered platform that lets you create and share interactive games and web pages with ease. By simply entering text prompts, users can generate fully functional, customizable websites and simulations, making web development accessible to everyone, from beginners to seasoned developers.
