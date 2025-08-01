@@ -1,117 +1,171 @@
 # Product Features Summary
 
+## Maybe AI Product Requirements Document (August 2025 Update)
+
+### 1. Product Repositioning
+
+#### 1.1 Core Differentiation
+**Maybe AI: Business Data Workflow Automation Expert**  
+Instead of building a general AI assistant, we focus on solving one core problem: Enable prosumers to describe their data needs in natural language and automatically complete the full "acquire → analyze → act" business cycle.
+
+#### 1.2 Upgraded Technology Moats
+- **Maybe Crawler**: Natural language-based intelligent web scraper that acquires any website data based on user descriptions.
+- **Intelligent Planning Engine**: Collaborative architecture of intent recognition + plan generation + tool invocation.
+- **Workflow Solidification Mechanism**: Automatically saves successful experiences as reusable intelligent solutions.
+- **MCP Ecosystem Extension**: Standard calls and short-circuit calls coexist, balancing stability and efficiency.
+- **Self-Learning Capability**: Continuously optimizes with each execution; user's dedicated solutions evolve persistently.
+
+#### 1.3 Upgraded Value Proposition
+- **For Users**: Describe data needs and get self-evolving dedicated intelligent solutions.
+- **For Industry**: Upgrade from "AI chat tools" to "self-learning business intelligence systems".
+- **Business Model**: Charge based on intelligence level and business value, not usage frequency.
+
+### 2. Current System Architecture
+
+#### 2.1 Multi-Module Collaborative Architecture
+**Core Philosophy**: Explore with intelligent planning, solidify with Workflows; continuous optimization forms a closed loop.  
+**System Modules**:
+- **Intent Recognition Module**: Understand complex user business needs.
+- **Plan Generation Module**: Formulate optimal execution strategies.
+- **Tool Invocation Module**: Execute specific tasks.
+- **Learning Solidification Layer**: Solidify successful experiences into reusable processes.
+
+#### 2.2 Maybe Crawler's Role in Current Architecture
+- **As MCP Tool**: Standardized data acquisition service called by the tool invocation module.
+- **As Intelligent Module**: Possesses natural language understanding and crawling strategy generation capabilities.
+- **As Workflow Component**: Successful crawling processes can be solidified into reusable data acquisition solutions.
+
+**Workflow**:
+1. Intent recognition module parses user data acquisition needs.
+2. Plan generation module formulates crawling strategy and execution plan.
+3. Tool invocation module calls Maybe Crawler (MCP or short-circuit).
+4. After successful execution, the entire process can be solidified into Workflow.
+
+#### 2.3 Architecture Evolution Planning
+- **Current Stage**: Single system with multiple modules, focusing on core experience refinement.
+- **Mid-term Evolution**: Workflow mutual invocation mechanism, agent calling workflows.
+- **Long-term Vision**: Complete Agent-Workflow bidirectional calling ecosystem.
+
+### 3. Target Users and Scenarios
+
+#### 3.1 Precise User Personas
+- **Core Users**: Business personnel who "live in spreadsheets".
+  - **Marketing Specialists (40%)**
+  - **Sales Personnel (30%)**
+  - **Financial Analysts (20%)**
+  - **Investment Personnel (10%)**
+
+#### 3.2 Business Scenario Evolution Examples
+- **Scenario 1**: Complete Evolution of Competitor Price Monitoring.
+- **Scenario 2**: Investment Project Screening Capability Accumulation.
+- **Scenario 3**: Intelligent Collaboration in Complex Business Scenarios.
+
+### 4. Product Feature Modules
+
+#### 4.1 Intent Recognition Module Upgrade
+- From Function Recognition to Business Understanding.
+
+#### 4.2 Plan Generation Module Upgrade
+- From Technical Planning to Value Planning.
+
+#### 4.3 Tool Invocation Module Upgrade
+- Intelligent Invocation Strategy.
+
+#### 4.4 Workflow Solidification System
+- Intelligent Solidification Mechanism.
+- Version Iteration Mechanism.
+
+### 5. August Iteration Breakthrough Plan
+
+#### 5.1 Product Validation Focus
+- **Week 1**: Core Value Hypothesis Validation.
+- **Week 2**: Core Scenario Deep Refinement.
+- **Week 3**: Complex Collaboration Value Validation.
+- **Week 4**: User Retention and Habit Formation.
+
+#### 5.2 Key Product Decisions
+- Decision 1: When to suggest users save solutions?
+- Decision 2: How to help users understand solution value?
+- Decision 3: How to balance automation and user control?
+- Decision 4: MCP calls vs short-circuit calls selection strategy?
+
+### 6. Risk Control and Response
+
+#### 6.1 Product Experience Risks
+- User Cognition Risk.
+- Complexity Management Risk.
+- Expectation Management Risk.
+
+#### 6.2 Technical Implementation Risks
+- System Module Collaboration Complexity.
+- MCP Calls vs Short-circuit Calls Consistency.
+- Workflow Solidification Quality Control.
+
+#### 6.3 Commercialization Risks
+- User Payment Willingness.
+
+### 7. Success Metrics Definition
+
+#### 7.1 Product Metrics
+- Solution Save Rate.
+- Solution Reuse Rate.
+- Solution Evolution Perception.
+
+#### 7.2 User Experience Metrics
+- First-time Success Rate.
+- Learning Curve.
+- User Retention.
+
+#### 7.3 Technical Metrics
+- MCP Call Success Rate.
+- Short-circuit Call Response Time.
+- Solution Execution Stability.
+
+#### 7.4 Business Metrics
+- Paid Conversion Rate.
+- ARPU.
+- User Lifetime Value.
+
+### 8. Business Model Design
+
+#### 8.1 Pricing Strategy
+- Value-based Pricing, Not Usage-based.
+- Tiered Pricing.
+
+#### 8.2 Growth Strategy
+- C2B Customer Acquisition Model.
+- Viral Growth.
+
+### 9. Competitive Moat Building
+
+#### 9.1 Data Moat
+- Accumulate data acquisition experience across industries.
+
+#### 9.2 User Stickiness
+- Historical data asset binding.
+
+#### 9.3 Technical Barriers
+- Natural language to execution plan conversion.
+
+**Core Product Philosophy**: Maybe AI enables users to upgrade from "using AI tools" to "owning dedicated intelligent solutions." Each solution learns the user's business logic and personal preferences; the system continuously optimizes execution efficiency, and the entire solution set evolves constantly. User success comes from "I own a set of intelligent solutions that understand my business," not "I learned to use a complex tool."
+
+---
+
+
+# Tech Stack
+
 **Architect:** [ProcessOn Link](https://www.processon.com/view/link/68466857fd036b1f4260e9b1?cid=68466822170d3978c9ff2c54)
 
-MAYBE.ai is an AI-driven answer platform for creating and managing Web3-focused agents and applications, inspired by V0.dev, Wordware, and Websim. 
-Based on OmniMCP which is a decentralized "tool supermarket" that allows intelligent agents (Agents) to easily connect with various tools and data sources. 
-Key features include:
+- Key agent framework using Autogen (in `fastest-api` folder)
+- MCPTool for tool calls (in `omnimcp-be` and `omnimcp-api-proxy` folder)
+- User chat interface and agent studio (build and test app/agent) (in `fastest-playground` folder)
+- Deployment architecture
 
-- **Agent/App Creation:** 
-  - Intuitive Playground interface for both non-technical and technical users to build agents/apps using natural language prompts, with plan generation and versioning.
-  
-- **MCP Tool Layer:** 
-  - Based on OmniMCP.ai Integrates APIs (e.g., Dune, Footprint, GMGN) and internal tools for crypto analytics/operations, with schema-based tool combination.
+- workflow for user chat
+use disptch to find best match agent/app
+ - if not found, will replan , find tools to answer the question
+    - if still could not planned agents will use research agent with search tool(google/perplexity/twitter search tool) try to satifsfy user's query
 
-- **Runtime Execution:** 
-  - Autogen-based framework for single/team agent tasks, supporting private data and long-running crypto tasks.
-
-- **User Interaction:** 
-  - Chat interface for non-technical users (80% of audience), white-label support, and social sharing of apps/agents.
-
-- **Analytics:** 
-  - Limited dashboard integration (Dune/Footprint); runtime chart generation planned.
-
-- **Crypto and Finance Focus:** 
-  - Specialized for token analysis, wallet data, and chain operations with entity recognition. will later expand to Finance Domain
-
-- **Credit System:** 
-  - Free users have limited credits; higher quotas for SuperGrok/x.com premium users.
-
-- **Target Users:** 
-  - 20% builders (often non-technical), 80% users interacting with pre-built apps.
-
----
-
-# Product Features Summary (Long)
-
-MAYBE.ai is designed to enable the creation, management, and execution of Web3-focused agents and applications, inspired by V0.dev’s rapid creation, Wordware’s accessibility, and Websim’s social sharing. It integrates an agent framework with a robust tool layer (OmniMCP) to support automation and analytics, particularly for cryptocurrency use cases. Below are the key features:
-
-## Agent and App Creation
-
-- **Playground Interface:** 
-  - A Notion-like interface for non-technical and technical users to create agents and apps using natural language prompts. Supports agent creation, editing, and versioning.
-
-- **Plan Generation:** 
-  - Generates executable plans based on user intent, selecting relevant agents and tools, with streaming APIs for real-time feedback.
-
-- **App Builder:** 
-  - Enables building chatbot-like apps by combining multiple agents, with support for predefined templates.
-
-## MCP Tool Layer
-
-- **Tool Integration:** 
-  - Integrates external APIs (e.g., Dune, Footprint, Chainbase, GMGN) and internal tools via OpenAPI standards for data retrieval and processing.
-
-- **Tool Combination:** 
-  - Allows users to combine tools into new MCP servers for enhanced functionality.
-
-- **Tool Knowledge:** 
-  - Generates input/output schemas and sample cases to improve tool usability, though coverage is limited (1-10%).
-
-## Runtime Execution
-
-- **Agent Framework:** 
-  - Built on Autogen, supporting single-agent ReAct and team-based execution for complex tasks, handling crypto-specific tasks like token analysis and wallet data retrieval.
-
-- **Private Data Support:** 
-  - Enables integration of private data for context-aware responses, though manual configuration is required.
-
-- **Long-Running Tasks:** 
-  - Supports tasks requiring extended execution, such as indexing crypto entities.
-
-- **Agent2Agent Compatibility:** 
-  - Uses Agentcard to enhance agent capabilities and reduce user workload by injecting domain knowledge and tool knowledge (including examples and input/output to enhance understanding and success rates).
-
-## User Interaction
-
-- **User Chat Interface:** 
-  - Allows non-technical users (80% of target audience) to interact with pre-built apps via a chat interface, supporting multi-session dialogues and chat history.
-
-- **White-Label Support:** 
-  - Provides custom interfaces for specific use cases (e.g., GMGN, Dune), restricted to designated apps/agents.
-
-- **Social Sharing:** 
-  - Apps and agents can be shared via links with access controls for public or private use.
-
-## Analytics and Visualization
-
-- **Dashboard Integration:** 
-  - Connects with Dune and Footprint dashboards for structured data retrieval, though parameter support is limited.
-
-- **Chart Generation:** 
-  - Planned feature for runtime chart creation using tools like ECharts.
-
-## Targeted Features for Crypto
-
-- **Crypto Knowledge:** 
-  - Specialized for crypto analysis (e.g., token price, wallet balance) and operations (e.g., chain transactions).
-
-- **Entity Recognition:** 
-  - Supports entity linking and rephrasing for improved query understanding in crypto contexts.
-
-## Credit System
-
-- Free users have limited chat credits, configurable in the database. Subscribed users (e.g., SuperGrok, x.com premium) access higher quotas.
-
-## Target Users
-
-- **Builders (20%):** 
-  - Often non-technical, creating agents/apps for specific use cases (e.g., crypto analysis, meme coin tracking).
-
-- **Users (80%):** 
-  - General users interacting with pre-built apps via chat interfaces for Web3 research and operations.
-
----
 
 ## Tool Knowledge Challenges
 
@@ -129,19 +183,6 @@ MAYBE.ai is designed to enable the creation, management, and execution of Web3-f
 OmniMCP.ai combines V0’s rapid creation, Wordware’s accessible interface, and Websim’s sharing capabilities to build a Web3 agent platform. Compared to UniQ, it lags in tool reliability, agent stability, and dashboard integration. Critical issues include stabilizing agent execution, improving tool reliability, and enhancing dashboard support. Key improvements needed are runtime chart generation, private data automation, and unified tool knowledge management. Prioritizing these will align OmniMCP closer to UniQ’s benchmark and enhance user experience for builders and users.
 
 ---
-
-# Tech Stack
-
-- Key agent framework using Autogen (in `fastest-api` folder)
-- MCPTool for tool calls (in `omnimcp-be` and `omnimcp-api-proxy` folder)
-- User chat interface and agent studio (build and test app/agent) (in `fastest-playground` folder)
-- Deployment architecture
-
-- workflow for user chat
-use disptch to find best match agent/app
- - if not found, will replan , find tools to answer the question
-    - if still could not planned agents will use research agent with search tool(google/perplexity/twitter search tool) try to satifsfy user's query
-
   
 ## Building Agent Page (Playground Interface)
 The "Building Agent" page in MAYBE.ai’s Playground provides an intuitive, interactive environment for users to create, configure, and test AI agents tailored for Web3 and crypto-focused tasks. This page is designed for both technical and non-technical users, supporting rapid prototyping and deployment of agents.
