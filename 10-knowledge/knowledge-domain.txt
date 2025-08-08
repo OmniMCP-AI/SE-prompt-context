@@ -1,0 +1,466 @@
+1. Finance
+Core Concepts
+Basic Terms: Stocks, Bonds, Futures, Options, Leverage, Margin, Stop Loss, Take Profit, Long, Short, Arbitrage, Hedging, Cycles, Markets Professional Terms: Alpha, Beta, Sharpe Ratio, VaR, Maximum Drawdown, Volatility, Liquidity, Market Cap, P/E Ratio, ROE, NPV, IRR Emerging Terms: Quantitative Trading, High-Frequency Trading, Algorithmic Trading, Robo-Advisors, Digital Currency, DeFi, NFT, ESG Investing, FinTech, Sustainable Finance, AI-Driven Trading, Real-Time Financial Data, Cash Flow Optimization, Blockchain Security
+Core Entities
+Primary Business Objects: Account: Account ID, Fund Balance, Available Funds, Frozen Funds, Risk Level, Transaction History, Credit Score
+Position: Security Code, Position Quantity, Cost Price, Market Value, Floating P&L
+Order: Order Number, Security Code, Buy/Sell Direction, Quantity, Price, Status
+Trade: Trade Number, Order Number, Trade Price, Trade Quantity, Fees, Time
+Financial Product: Product ID, Type, Price, Maturity Date, Risk Level
+Portfolio: Portfolio ID, Asset Allocation, Total Market Value, Yield
+Market Data: Real-Time Price, Volume, Change Percentage, Technical Indicators
+Related Objects: Risk Indicators, Customer Accounts, Portfolios
+Attribute Definitions: Account Attributes Include Balance, Transaction History; Product Attributes Include Type, Price, Risk Level
+Data Models
+Relational Models
+ER Diagram: Many-to-Many Between Financial Products and Trades, One-to-Many Between Customer Accounts and Orders
+Financial Product  Trade Orders (Many-to-Many)
+Customer Account → Trade Records (One-to-Many)
+Portfolio → Position Details (One-to-Many)
+Data Governance
+Version Control: Manage Price Data Versions for Historical Traceability
+Audit Logs: Record All Trade Operations to Meet Financial Regulations
+Data Accuracy: Real-Time Data Validation, Auto-Mark Abnormal Data
+Market Data: Open, High, Low, Close Prices, Volume, Bid/Ask Depth
+Account Data: Available Funds, Position Details, Floating P&L, Margin Usage, Risk Degree
+Trade Data: Order Status, Trade Records, Fees, Slippage, Execution Price
+Risk Data: VaR Values, Stress Test Results, Correlation Matrices, Exposure Analysis
+Work Scenarios
+Investment Decisions: Fundamental Analysis, Technical Analysis, Quantitative Model Building
+Risk Management: Position Control, Stop Loss Settings, Portfolio Optimization
+Trade Execution: Order Management, Execution Algorithms, Cost Control
+Research Analysis: Industry Research, Company Surveys, Macro Analysis
+Compliance Review: Anti-Money Laundering Monitoring, Trade Report Generation
+Decision Logic
+Stop Loss/Take Profit: Auto Stop Loss if Loss >2%, Take Profit at Target Price
+Position Management: Single Stock ≤20% of Total Funds, Industry Concentration ≤40%
+Technical Indicators: MACD Golden Cross Buy, Death Cross Sell; RSI Overbought/Oversold Signals
+Risk Control: Reduce Position if VaR Exceeds Limit, Pause Trading if Stress Test Fails
+AI Assistance: Use Machine Learning to Predict Market Trends, Dynamically Adjust Portfolios
+Role Permissions
+Trader: Execute Trade Orders, View Real-Time Market, Manage Personal Positions
+Investment Manager: Formulate Strategies, Approve Large Trades, Monitor Portfolio Performance
+Risk Manager: Set Risk Parameters, Monitor Risk Indicators, Execute Forced Liquidations
+Researcher: Publish Reports, Provide Suggestions, Maintain Rating Systems
+Administrator: System Configuration, Permission Management, Data Backup
+Exception Handling
+System Failure: Activate Backup Trading System, Manual Orders, Emergency Liquidation
+Extreme Market: Trigger Circuit Breaker, Pause Trading, Risk Assessment
+Insufficient Funds: Force Position Reduction, Margin Call Notification, Freeze New Positions
+Operational Errors: Timely Correction, Loss Assessment, Process Improvement
+Cyber Attacks: Security Audits, Data Encryption, Backup Recovery
+Domain-Specific Examples
+Example 1: Portfolio Performance Analysis Intent Recognition: User says: "Analyze my investment portfolio performance." Intent: Portfolio performance analysis. Task Decomposition: 1. Retrieve holding data; 2. Calculate return metrics; 3. Analyze risk distribution. Execution Steps: Step 1: Query account holdings; Step 2: Calculate returns and risk metrics; Step 3: Generate analysis report. Return Analysis: Total return and annualized return calculation, benchmark comparison, individual holding contribution analysis, historical performance curve Risk Assessment: Maximum drawdown analysis, volatility calculation, VaR risk assessment, correlation analysis Position Analysis: Sector allocation breakdown, individual stock weight distribution, asset class allocation, concentration risk assessment
+Example 2: Market Monitoring & Alerts Intent Recognition: User says: "Monitor market volatility anomalies." Intent: Market risk monitoring. Task Decomposition: 1. Real-time data monitoring; 2. Anomaly detection; 3. Risk alerts. Execution Steps: Step 1: Connect to market data feeds; Step 2: Run anomaly detection algorithms; Step 3: Trigger alert notifications. Real-time Monitoring: Price volatility spike detection, volume surge alerts, technical indicator divergence signals Risk Assessment: Market sentiment indicators, volatility regime changes, liquidity risk evaluation Alert Mechanisms: Automated notification system, risk level classification, emergency response recommendations
+Example 3: Trading Strategy Backtesting Intent Recognition: User says: "Test my trading strategy effectiveness." Intent: Strategy backtesting analysis. Task Decomposition: 1. Set backtest parameters; 2. Execute historical simulation; 3. Evaluate strategy performance. Execution Steps: Step 1: Configure strategy rules; Step 2: Run historical data backtest; Step 3: Generate performance report. Return Analysis: Cumulative return curves, annualized returns, maximum drawdown period analysis Trading Statistics: Number of trades, win rate statistics, average holding period, profit/loss ratio analysis Risk Assessment: Sharpe ratio, Calmar ratio, downside risk measurement
+
+Key Metrics
+Calculation Formulas: Yield = (Ending Market Value - Beginning Market Value) / Beginning Market Value × 100%; Sharpe Ratio = (Portfolio Yield - Risk-Free Yield) / Portfolio Standard Deviation; Maximum Drawdown = (Historical Peak Net Value - Lowest Net Value) / Historical Peak Net Value × 100%; Win Rate = Profitable Trades / Total Trades × 100%
+Evaluation Criteria: Sharpe Ratio >1 Indicates Good; Maximum Drawdown <20% Indicates Low Risk; Win Rate >60% Indicates Efficiency
+Business Meanings: Measure Investment Efficiency, Risk Control, and Trade Quality to Support Optimization Decisions
+Evaluation Standards
+Return Metrics: Annualized Yield, Cumulative Yield, Excess Returns, Benchmark Comparison
+Risk Metrics: Maximum Drawdown, Volatility, Sharpe Ratio, Sortino Ratio
+Trade Metrics: Win Rate, Profit/Loss Ratio, Trade Frequency, Turnover Rate
+Benchmark Testing: Compare with Market Indices, Industry Averages
+Tool Ecosystem
+Global Tools: Bloomberg Terminal, Thomson Reuters Eikon, FactSet, Interactive Brokers, MetaTrader, QuickBooks China Tools: Wind Financial Terminal, East Money Choice, Tonghuashun iFinD, Tongdaxin, Great Wisdom, UFIDA Financial Software
+
+2. E-commerce
+Core Concepts
+Basic Terms: SKU, SPU, GMV, Average Order Value, Conversion Rate, Repurchase Rate, Customer Acquisition Cost, Lifetime Value Professional Terms: CTR, CVR, ROI, ROAS, LTV, CAC, AOV, UV, PV, Bounce Rate Emerging Terms: Social E-commerce, Live Streaming Sales, Private Domain Traffic, DTC Brands, Omnichannel, Intelligent Recommendations, AI-Driven Personalization, Social Shopping, Sustainability, Voice Commerce, Virtual Try-On, AI Shopping Assistants
+Core Entities
+Primary Business Objects: Product: Product ID, SKU, Name, Price, Inventory, Category, Attributes
+Order: Order Number, User ID, Product List, Total Amount, Status, Payment Method, Shipping Address
+Customer: User ID, Basic Info, Purchase History, Tags, Level, Points
+Cart: User ID, Product List, Quantity, Add Time, Status
+Related Objects: Marketing Campaigns, Inventory Records, Logistics Info
+Attribute Definitions: Product Attributes Include Price, Inventory; Order Attributes Include Status, Amount
+Data Models
+Product Data: Product ID, SKU Code, Inventory Quantity, Pricing System, Attribute Tags
+Order Data: Order Status, Payment Method, Logistics Info, Return/Exchange Records
+User Data: User Profile, Behavior Tracks, Purchase History, Preference Tags
+Marketing Data: Traffic Sources, Ad Placements, Conversion Funnels, ROI Analysis
+Relational Models: Users  Orders (One-to-Many), Products  Order Items (Many-to-Many)
+Work Scenarios
+Product Management: Listing/Delisting, Price Adjustments, Inventory Management, Promotions
+Order Processing: Order Confirmation, Payment Handling, Shipping Arrangements, After-Sales Service
+Marketing Promotion: Ad Placements, Content Marketing, Community Operations, KOL Collaborations
+Data Analysis: Sales Analysis, User Analysis, Competitor Analysis, Trend Forecasting
+Supply Chain Optimization: Supplier Coordination, Inventory Forecasting
+Decision Logic
+Inventory Alert: Safety Stock = Daily Average Sales × Supply Cycle × Safety Factor
+Pricing Strategy: Cost Price × (1 + Gross Margin) × Competition Adjustment Factor
+Promotion Trigger: Inventory Turnover Days >30 or Slow-Moving Items Auto-Promote
+Recommendation Algorithm: Collaborative Filtering + Content Recommendation + Real-Time Behavior Weights
+AI Assistance: Predict Demand, Dynamic Pricing
+Role Permissions
+Operations: Product Listing, Campaign Planning, Data Analysis, Customer Communication
+Procurement: Supplier Management, Purchase Decisions, Cost Control, Quality Assurance
+Customer Service: Order Processing, Returns/Exchanges, Complaint Handling, User Inquiries
+Finance: Revenue Recognition, Cost Accounting, Reconciliation, Profit Analysis
+Administrator: System Configuration, Permission Settings
+Exception Handling
+Inventory Shortage: Auto Delist Product, Recommend Alternatives, Emergency Procurement
+Payment Anomalies: Retry Payment Process, Order Retention Time, Risk Review
+Logistics Delays: Timely Customer Notification, Compensation Schemes, Reassign Courier
+Quality Issues: Quick Returns/Exchanges, Supplier Accountability, Quality Control Improvements
+Refund Disputes: Evidence Review, Automated Processing
+Domain-Specific Examples
+Example 1: Competitor Analysis Intent Recognition: User says: "Analyze competitor product strategies." Intent: Competitive strategy analysis. Task Decomposition: 1. Identify main competitors; 2. Collect competitor data; 3. Compare and analyze differences. Execution Steps: Step 1: Scrape competitor information; Step 2: Organize pricing and feature data; Step 3: Generate comparison report. Price Analysis: Competitor price ranges, promotion frequency comparison, pricing strategy trends Product Analysis: Feature comparison, user review analysis, product iteration speed Marketing Analysis: Advertising strategies, channel distribution comparison, brand positioning differences
+Example 2: Inventory Optimization Intent Recognition: User says: "Optimize my inventory management." Intent: Inventory optimization analysis. Task Decomposition: 1. Analyze sales data; 2. Forecast demand trends; 3. Develop restocking strategy. Execution Steps: Step 1: Extract historical sales data; Step 2: Run demand forecasting models; Step 3: Output restocking recommendations. Demand Forecasting: Seasonal trend analysis, promotional impact assessment, new product demand prediction Inventory Analysis: Turnover rate calculation, slow-moving item identification, safety stock setting Restocking Strategy: Optimal order quantity calculation, supplier lead time consideration, cost-benefit analysis
+Example 3: Customer Segmentation Intent Recognition: User says: "Analyze different customer segments' value." Intent: Customer value analysis. Task Decomposition: 1. Collect customer data; 2. Perform customer clustering; 3. Analyze segment characteristics. Execution Steps: Step 1: Integrate customer behavior data; Step 2: Run clustering algorithms; Step 3: Generate customer personas. Customer Segmentation: RFM model analysis, lifecycle stage classification, value contribution ranking Behavior Analysis: Purchase preference identification, activity level assessment, churn risk prediction Marketing Recommendations: Personalized recommendation strategies, precision marketing plans, customer retention programs
+
+Key Metrics
+Calculation Formulas: Conversion Rate = Ordering Users / Visiting Users × 100%; AOV = Total Sales / Order Quantity; Repurchase Rate = Repeat Buyers / Total Buyers × 100%; CAC = Marketing Expenses / New Customers
+Evaluation Criteria: Conversion Rate >5% Indicates Good; Repurchase Rate >30% Indicates Loyalty; CAC < LTV Indicates Profitability
+Business Meanings: Assess Sales Efficiency, Customer Value, and Marketing Effectiveness
+Evaluation Standards
+Sales Metrics: GMV Growth Rate, Order Volume, AOV, Repurchase Rate
+Operations Metrics: Conversion Rate, CAC, User Retention Rate, Inventory Turnover Rate
+Service Metrics: Shipping Timeliness Rate, Customer Service Response Time, Satisfaction Score
+Benchmark Testing: Compare with Industry Averages
+Tool Ecosystem
+Global Tools: Shopify, Amazon Seller Central, Google Analytics, Facebook Ads, Mailchimp China Tools: Taobao Qianniu, JD Merchant Backend, Pinduoduo Backend, Shiye Canmou, Youzan, TMall, 1688, SMZDM
+
+3. Social Media Operations
+Core Concepts
+Basic Terms: Fans, Traffic, Exposure, Interactions, Conversions, Monetization, Content, Creators Professional Terms: CPM, CPC, CPA, CTR, Interaction Rate, Completion Rate, Fan Growth Rate, Fan Stickiness Emerging Terms: Private Domain Traffic, Content Marketing, KOL, MCN, Live Streaming Sales, Short Videos, Algorithm Recommendations, Content Experiments, Social Listening, Generative AI, Video Dominance, Cultural Fluency, User-Generated Content, Social Commerce
+Core Entities
+Primary Business Objects: Content: Content ID, Title, Body, Media Files, Tags, Publish Time, Status
+Account: Account ID, Platform Type, Fan Count, Certification Status, Level, Permissions
+Campaign: Campaign ID, Name, Time Range, Goals, Budget, Effects
+Fan: Fan ID, Profile Tags, Activity Level, Interaction History, Value Level
+Related Objects: Interaction Records, Business Collaborations
+Attribute Definitions: Content Attributes Include Tags, Publish Time; Fan Attributes Include Activity Level, Tags
+Data Models
+Content Data: Title, Body, Cover, Tags, Publish Time, Content Type
+Interaction Data: Views, Likes, Comments, Shares, Favorites
+Fan Data: Fan Profiles, Active Times, Interaction Preferences, Churn Rate
+Business Data: Ad Revenue, Sales GMV, Tips Revenue, Brand Collaboration Fees
+Relational Models: Content  Interactions (One-to-Many), Account  Fans (One-to-Many)
+Work Scenarios
+Content Creation: Topic Planning, Content Production, Visual Design, Copywriting
+Community Operations: Fan Interactions, Comment Replies, Event Planning, Group Management
+Business Collaborations: Brand Negotiations, Ad Placements, Product Promotions, Revenue Sharing
+Data Analysis: Content Effects, Fan Analysis, Competitor Research, Trend Grasping
+Algorithm Optimization: SEO Adjustments, Tag Optimization
+Decision Logic
+Publish Timing: Peak Fan Activity, Weekdays 19-21 Optimal
+Content Topics: Hot Topics + Vertical Expertise + Personal Style
+Interaction Strategies: Priority Reply to VIP Fans, Cautious Handling of Controversial Comments
+Monetization Pace: Gradually Commercialize After Fan Threshold, Maintain Content Quality
+AI Assistance: Generate Content Drafts, Predict Interaction Rates
+Role Permissions
+Editor-in-Chief: Content Strategy, Publish Review, Business Decisions, Team Management
+Editor: Content Creation, Material Collection, Initial Review, SEO Optimization
+Operations: Fan Interactions, Data Analysis, Event Execution, Community Maintenance
+Business: Ad Negotiations, Collaboration Talks, Revenue Management, Brand Maintenance
+Administrator: Platform Configuration, Data Backup
+Exception Handling
+Content Violations: Immediate Delisting, Appeal Process, Modify and Republish
+Malicious Attacks: Preserve Evidence, Platform Reporting, Legal Rights Protection
+Data Anomalies: Verify Authenticity, Investigate Brushing, Account Risk Assessment
+Collaboration Disputes: Confirm Contract Terms, Negotiate Solutions, Legal Intervention if Needed
+Traffic Fluctuations: Backup Content Release, Algorithm Adjustments
+Domain-Specific Examples
+Example 1: Competitor Account Monitoring Intent Recognition: User says: "Monitor peer account performance." Intent: Competitor account analysis. Task Decomposition: 1. Identify competitor accounts; 2. Collect operational data; 3. Compare and analyze strategies. Execution Steps: Step 1: Scrape competitor content; Step 2: Analyze engagement data; Step 3: Summarize operational strategies. Content Analysis: Publishing frequency comparison, content type statistics, viral content characteristics Data Comparison: Follower growth trends, engagement rate changes, reach effectiveness evaluation Strategic Insights: Topic direction summary, posting timing analysis, interaction strategy learning
+Example 2: Trending Content Discovery Intent Recognition: User says: "Find recent trending topics." Intent: Hot content mining. Task Decomposition: 1. Monitor trending lists; 2. Analyze topic heat; 3. Evaluate relevance. Execution Steps: Step 1: Scrape platform trending topics; Step 2: Calculate topic heat index; Step 3: Match domain relevance. Trend Monitoring: Real-time trending tracking, topic heat trends, viral path analysis Relevance Assessment: Domain relevance scoring, creation difficulty assessment, competition intensity Creation Suggestions: Angle entry recommendations, content format suggestions, optimal publishing timing
+Example 3: Successful Creator Case Study Intent Recognition: User says: "Study successful creators' methods." Intent: Success case learning. Task Decomposition: 1. Screen target creators; 2. Analyze success factors; 3. Extract replicable insights. Execution Steps: Step 1: Identify top creators; Step 2: Analyze their content strategies; Step 3: Summarize success patterns. Growth Trajectory: Follower growth history, key milestone analysis, breakthrough content identification Content Strategy: Topic pattern summary, creative style analysis, interaction method research Business Model: Monetization path analysis, brand collaboration analysis, revenue structure estimation
+Example 4: Content Rewriting & Optimization Intent Recognition: User says: "Help me rewrite this viral content." Intent: Content rewriting creation. Task Decomposition: 1. Analyze original content structure; 2. Extract core elements; 3. Recreate expression. Execution Steps: Step 1: Parse content framework; Step 2: Identify viral elements; Step 3: Generate new version content. Structure Analysis: Title pattern identification, content logic mapping, emotional trigger points Element Extraction: Core viewpoint summary, expression technique identification, interaction design analysis Creative Optimization: Alternative perspective expression, personal style integration, homogenization risk avoidance
+
+
+Key Metrics
+Calculation Formulas: Views = Total Content Views; Interaction Rate = (Likes + Comments + Shares) / Views × 100%; Fan Growth Rate = New Fans / Initial Fans × 100%; CPM = Ad Expenses / Impressions × 1000
+Evaluation Criteria: Interaction Rate >5% Indicates Active; Growth Rate >10% Indicates Growth; CPM < Industry Average Indicates Efficiency
+Business Meanings: Assess Content Quality, Fan Loyalty, and Business Value
+Evaluation Standards
+Content Metrics: Views, Interaction Rate, Share Rate, Completion Rate
+Fan Metrics: New Fans, Fan Activity, Fan Quality, Retention Rate
+Business Metrics: Ad Revenue, Sales Conversion Rate, Brand Collaborations, ROI
+Benchmark Testing: Compare with Competitors
+Tool Ecosystem
+Global Tools: YouTube Studio, Facebook Creator Studio, Instagram Business, TikTok Creator Center, Hootsuite China Tools: WeChat Official Accounts, Douyin Creator Center, Xiaohongshu Professional Account, Bilibili Creation Center, Xinbang, ERNIE (Baidu), Sogou
+
+4. CRM/ERP
+Core Concepts
+Basic Terms: Customers, Leads, Opportunities, Deals, Customer Lifecycle, Sales Funnel, Customer Satisfaction, Orders, Sales, Inventory Professional Terms: Lead, Opportunity, Pipeline, Conversion Rate, CAC, LTV, Churn Rate, Sales Pipeline, Opportunities, Conversion Rate, Customer Acquisition Cost, Customer Lifetime Value, Churn Rate Emerging Terms: Marketing Automation, Customer Success, Sales Enablement, Predictive Analytics, AI Customer Service, Data Mid-Platform, AI-Driven CRM, Omnichannel, Data Analysis Integration, Cloud ERP, Second-Layer ERP, Digital Transformation
+Core Entities
+Primary Business Objects: Customer: Customer ID, Company Name, Contact, Industry, Scale, Status, Tags
+Lead: Lead ID, Source, Contact Info, Needs, Score, Assignment Status
+Opportunity: Opportunity ID, Customer ID, Amount, Stage, Probability, Expected Close Time
+Contract: Contract Number, Customer ID, Amount, Terms, Signing Status, Payment Plan
+Related Objects: Service Tickets, Financial Records
+Attribute Definitions: Customer Attributes Include Industry, Tags; Opportunity Attributes Include Stage, Probability
+Data Models
+Customer Data: Basic Info, Contact Methods, Company Info, Decision Processes, Needs Analysis
+Sales Data: Opportunity Stages, Deal Probability, Expected Amounts, Follow-Up Records, Competitors
+Service Data: Ticket Status, Issue Categories, Processing Time, Satisfaction Surveys
+Financial Data: Contract Amounts, Payment Plans, Accounts Receivable, Cost Allocation
+Relational Models: Customers → Opportunities (One-to-Many), Opportunities → Contracts (One-to-One)
+Work Scenarios
+Customer Acquisition: Lead Collection, Qualification, Needs Mining, Opportunity Creation
+Sales Management: Follow-Up Plans, Quote Management, Contract Signing, Payment Tracking
+Customer Service: Issue Handling, Complaint Resolution, Satisfaction Surveys, Renewal Maintenance
+Data Analysis: Sales Forecasting, Customer Analysis, Performance Evaluation, Trend Judgment
+Supply Chain Integration: Inventory Synchronization, Order Automation
+Decision Logic
+Lead Assignment: Region + Industry + Sales Capability Matching for Auto Assignment
+Follow-Up Frequency: A-Class Customers Every 3 Days, B-Class Every 7 Days, C-Class Every 15 Days
+Approval Processes: Discounts >20% Require Supervisor Approval, >30% Require Director Approval
+Customer Tiering: Comprehensive Scoring Based on Contract Amount, Payment Ability, Collaboration History
+AI Assistance: Predict Churn Risks, Recommend Cross-Selling
+Role Permissions
+Sales: Customer Management, Opportunity Follow-Up, Quoting Permissions, Customer Visits
+Sales Manager: Team Management, Data Viewing, Approval Permissions, Performance Reviews
+Customer Service: Ticket Processing, Customer Communication, Issue Escalation, Satisfaction Surveys
+Administrator: System Configuration, Permission Settings, Data Backup, Report Customization
+Exception Handling
+Customer Complaints: Respond Within 24 Hours, Tiered Issue Handling, Satisfaction Follow-Up
+Contract Disputes: Legal Intervention, Evidence Preservation, Negotiation Solutions
+System Failures: Data Backup Recovery, Emergency Processes, Business Continuity
+Data Errors: Change Approvals, Operation Logs, Data Rollback Mechanisms
+Integration Failures: Retry Mechanisms, Backup Channels
+Domain-Specific Examples
+Example 1: Sales Funnel Analysis Intent Recognition: User says: "Analyze my sales conversion situation." Intent: Sales funnel optimization. Task Decomposition: 1. Map sales process; 2. Calculate stage conversion rates; 3. Identify bottleneck stages. Execution Steps: Step 1: Extract sales stage data; Step 2: Calculate conversion rates; Step 3: Locate problem areas. Process Analysis: Stage duration time, conversion rate trend changes, loss reason statistics Bottleneck Identification: Lowest conversion rate stages, abnormal loss point analysis, improvement opportunity assessment Optimization Recommendations: Process improvement plans, training needs identification, tool support suggestions
+Example 2: Customer Churn Prediction Intent Recognition: User says: "Predict which customers might churn." Intent: Customer churn prediction. Task Decomposition: 1. Analyze customer behavior; 2. Build prediction model; 3. Output risk list. Execution Steps: Step 1: Collect customer interaction data; Step 2: Run churn prediction algorithms; Step 3: Generate alert report. Behavior Analysis: Interaction frequency decline, purchase cycle extension, complaint increase trends Risk Assessment: Churn probability scoring, risk level classification, time window prediction Retention Strategy: Personalized communication plans, discount policy recommendations, service improvement measures
+Example 3: Sales Forecasting Intent Recognition: User says: "Forecast next quarter's sales performance." Intent: Sales performance prediction. Task Decomposition: 1. Collect historical data; 2. Analyze influencing factors; 3. Build prediction model. Execution Steps: Step 1: Integrate multi-dimensional data; Step 2: Identify predictive variables; Step 3: Output forecast results. Data Analysis: Historical performance trends, seasonal pattern identification, external factor impacts Model Building: Time series analysis, multiple regression modeling, machine learning prediction Result Output: Forecast value ranges, confidence level assessment, risk factor alerts
+
+
+Key Metrics
+Calculation Formulas: Lead Conversion Rate = Closed Customers / Total Leads × 100%; Sales Cycle = Average Days from Initial Contact to Close; LTV = AOV × Purchase Frequency × Relationship Duration; Sales Completion Rate = Actual Sales / Sales Target × 100%
+Evaluation Criteria: Conversion Rate >20% Indicates Good; Sales Cycle <30 Days Indicates Efficiency; LTV >3×CAC Indicates Profitability
+Business Meanings: Assess Sales Efficiency and Service Quality
+Evaluation Standards
+Sales Metrics: Completion Rate, Average Order Value, Deal Cycle, Conversion Rate
+Service Metrics: First Resolution Rate, Average Response Time, Customer Satisfaction
+Management Metrics: Lead Quality, Sales Efficiency, Customer Retention Rate, Repurchase Rate
+Tool Ecosystem
+Global Tools: Salesforce, SAP, Oracle ERP, NetSuite, HubSpot, Pipedrive, Microsoft Dynamics, Oracle CX China Tools: UFIDA, Kingdee, Fenxiang Xiaoke, Alibaba Cloud CRM, Xiaoshouyi, Hongquan Marketing, EC Yingketong, Epicor Kinetic, Odoo
+
+5. Education
+Core Concepts
+Basic Terms: Courses, Credits, Grades, Exams, Assignments, Attendance, Learning Objectives, Teaching Plans, Students Professional Terms: LMS, MOOC, Flipped Classroom, Blended Learning, Adaptive Learning, Learning Analytics, Learning Outcomes, Curriculum, Assessment, Online Learning Emerging Terms: Online Education, AI Teachers, Personalized Learning, VR Teaching, Micro-Lessons, Live Classes, Adaptive Learning, AI Tutoring, Micro-Credentials, Blended Learning, AI Integration, Teacher Retention
+Core Entities
+Primary Business Objects: Student: Student ID, Basic Info, Learning Records, Grades, Certificates, Levels
+Course: Course ID, Name, Knowledge Points, Duration, Difficulty, Prerequisites
+Assignment: Assignment ID, Course ID, Topics, Submission Time, Grades, Feedback
+Exam: Exam ID, Course ID, Questions, Time, Grades, Pass Status
+Related Objects: Teacher Records, Resource Libraries
+Attribute Definitions: Student Attributes Include Grades, Levels; Course Attributes Include Difficulty, Prerequisites
+Data Models
+Student Data: Basic Info, Learning History, Ability Assessments, Learning Preferences, Progress Tracking
+Course Data: Knowledge Point Structures, Difficulty Levels, Prerequisites, Learning Duration, Completion Standards
+Teaching Data: Attendance Records, Assignment Submissions, Exam Grades, Classroom Interactions, Learning Tracks
+Behavior Data: Login Frequency, Learning Duration, Key Difficulties, Error Patterns, Learning Paths
+Relational Models: Students  Courses (Many-to-Many), Courses → Assignments (One-to-Many)
+Work Scenarios
+Course Design: Teaching Objectives, Content Planning, Resource Preparation, Assessment Methods
+Teaching Implementation: Classroom Teaching, Assignment Setting, Q&A Guidance, Progress Tracking
+Learning Management: Course Enrollment, Grade Management, Certificate Issuance, Student Records Maintenance
+Effect Evaluation: Learning Analysis, Outcome Assessment, Improvement Suggestions, Quality Monitoring
+Personalized Guidance: AI-Recommended Learning Paths
+Decision Logic
+Personalized Recommendations: Learning Ability + Knowledge Base + Learning Goals Matching Courses
+Alert Mechanisms: Trigger Alert for No Learning in 3 Consecutive Days or Continuous Grade Decline
+Difficulty Adjustment: Reduce Difficulty if Error Rate >60%, Increase Challenge if <20%
+Grouping Strategies: Comprehensive Consideration of Learning Progress + Ability Levels + Learning Styles
+AI Assistance: Predict Learning Outcomes, Adjust Plans
+Role Permissions
+Teacher: Course Creation, Content Release, Grade Entry, Student Management
+Student: Course Learning, Assignment Submission, Grade Viewing, Certificate Download
+Academic Affairs: Course Scheduling, Student Management, Data Statistics, System Configuration
+Administrator: Permission Settings, System Maintenance, Data Backup, Security Management
+Exception Handling
+Learning Difficulties: Adjust Learning Plans, Arrange Extra Tutoring, Psychological Guidance
+Technical Failures: Switch to Backup Systems, Offline Learning Modes, Progress Compensation
+Exam Cheating: Invalidate Grades, Retake Exams, Integrity Education
+Complaint Disputes: Investigate Evidence, Fair Handling, Appeal Mechanisms
+Data Loss: Backup Recovery, Log Tracking
+Domain-Specific Examples
+Example 1: Learning Path Planning Intent Recognition: User says: "Create personalized learning plans for students." Intent: Learning path customization. Task Decomposition: 1. Assess student abilities; 2. Analyze learning objectives; 3. Design learning paths. Execution Steps: Step 1: Conduct ability assessment; Step 2: Match learning objectives; Step 3: Generate learning plans. Ability Assessment: Knowledge foundation testing, learning style identification, weakness diagnosis Objective Analysis: Learning goal decomposition, time planning setting, milestone establishment Path Design: Personalized course recommendations, learning sequence arrangement, progress adjustment mechanisms
+Example 2: Teaching Effectiveness Evaluation Intent Recognition: User says: "Evaluate course teaching effectiveness." Intent: Teaching quality analysis. Task Decomposition: 1. Collect learning data; 2. Analyze teaching effects; 3. Optimize teaching plans. Execution Steps: Step 1: Organize academic performance; Step 2: Calculate teaching indicators; Step 3: Output improvement suggestions. Data Collection: Grade change trends, study duration statistics, interaction participation analysis Effect Analysis: Knowledge mastery rate calculation, skill improvement assessment, learning objective achievement Optimization Suggestions: Teaching content adjustment, teaching method improvement, learning resource optimization
+Example 3: Online Learning Monitoring Intent Recognition: User says: "Monitor students' online learning status." Intent: Learning behavior monitoring. Task Decomposition: 1. Track learning behaviors; 2. Identify learning problems; 3. Provide timely intervention. Execution Steps: Step 1: Collect behavior logs; Step 2: Analyze learning patterns; Step 3: Send reminder suggestions. Behavior Tracking: Login frequency statistics, study duration analysis, assignment completion status Problem Identification: Learning progress delays, comprehension difficulty identification, attention distraction detection Intervention Strategies: Personalized reminder notifications, learning suggestion generation, tutoring resource recommendations
+
+
+Key Metrics
+Calculation Formulas: Completion Rate = Completed Course Students / Enrolled Students × 100%; Pass Rate = Passed Exam Students / Exam Takers × 100%; Learning Duration = Cumulative Platform Learning Time; Knowledge Point Mastery = Correct Answers / Total Questions × 100%
+Evaluation Criteria: Completion Rate >80% Indicates Good; Pass Rate >70% Indicates Effective
+Business Meanings: Measure Teaching Quality and Student Engagement
+Evaluation Standards
+Learning Effects: Knowledge Mastery, Skill Improvement Amplitude, Learning Goal Achievement Rate
+Teaching Quality: Course Completion Rate, Student Satisfaction, Teaching Effect Evaluation
+Operations Metrics: Platform Activity, Course Popularity, Renewal Rate
+Tool Ecosystem
+Global Tools: Canvas, Blackboard, Google Classroom, Zoom, Coursera China Tools: DingTalk Education, Tencent Classroom, Yu Classroom, Chaoxing Learning Pass, Zhihuishu, Smart Education of China 2.0
+
+6. Recruitment
+Core Concepts
+Basic Terms: Resumes, Interviews, Offers, Salaries, Benefits, Probation Periods, Resignations, Background Checks, Positions, Onboarding Professional Terms: ATS, RPO, HC, JD, Offer, Onboarding, Pipeline, Talent Pool, Talent Pipeline, Conversion Rate, Time-to-Hire Emerging Terms: Employer Branding, Candidate Experience, Data-Driven Recruitment, AI Screening, Video Interviews, Diversity Hiring, Remote Onboarding, Virtual Recruitment, Automation, Chatbots, Predictive Analytics, Flexibility
+Core Entities
+Primary Business Objects: Position: Position ID, Name, Department, Requirements, Salary Range, Status, Urgency
+Candidate: Candidate ID, Resume, Skills, Experience, Expected Salary, Status
+Interview: Interview ID, Candidate ID, Rounds, Interviewer, Time, Score, Feedback
+Offer: Offer ID, Candidate ID, Salary, Benefits, Start Date, Status
+Related Objects: Channel Sources, Performance Records
+Attribute Definitions: Position Attributes Include Requirements, Salary; Candidate Attributes Include Skills, Status
+Data Models
+Position Data: Job Descriptions, Requirements, Salary Ranges, Urgency, Budget Controls
+Resume Data: Personal Info, Education Background, Work Experience, Skill Tags, Expected Salary
+Interview Data: Interview Rounds, Score Records, Interviewer Feedback, Decision Suggestions
+Channel Data: Resume Sources, Delivery Costs, Conversion Effects, Quality Ratings
+Relational Models: Positions  Candidates (One-to-Many), Candidates → Interviews (One-to-Many)
+Work Scenarios
+Needs Analysis: Position Sorting, Requirement Confirmation, Budget Approval, Time Planning
+Resume Screening: Keyword Matching, Qualification Review, Phone Initial Screening, Background Verification
+Interview Arrangements: Time Coordination, Interviewer Matching, Process Design, Result Evaluation
+Offer Decisions: Salary Negotiations, Offer Issuance, Onboarding Arrangements, Probation Management
+Talent Pool Maintenance: Potential Candidate Tracking
+Decision Logic
+Resume Screening: Education + Experience + Skill Match ≥80% Proceed to Interview
+Interview Scoring: Professional Ability 40% + Communication 30% + Cultural Fit 30%
+Salary Positioning: Market Benchmark + Internal Equity + Individual Ability Premium
+Offer Approval: Higher Levels Require More Approval Layers, Salary Deviation Control
+AI Assistance: Auto Screen Resumes, Predict Match Degrees
+Role Permissions
+HR: Full Process Management, Candidate Communication, Data Analysis, Process Optimization
+Hiring Manager: Needs Confirmation, Interview Decisions, Offer Suggestions, Team Integration
+Interviewer: Professional Assessments, Ability Judgments, Cultural Fit Evaluations
+Executives: Key Position Final Interviews, Salary Approvals, Strategic Recruitment Decisions
+Exception Handling
+Candidate No-Shows: Timely Adjustments, Activate Backup Candidates, Reschedule
+Interviewer Absences: Emergency Replacements, Interview Delays, Candidate Appeasement
+Offer Rejections: Cause Analysis, Condition Adjustments, Employer Brand Improvements
+Background Issues: Deep Verification, Risk Assessments, Offer Decision Adjustments
+Data Breaches: Encryption Protection, Audit Tracking
+Domain-Specific Examples
+Example 1: Talent Market Analysis Intent Recognition: User says: "Analyze current talent market conditions." Intent: Talent market research. Task Decomposition: 1. Collect market data; 2. Analyze supply-demand relationship; 3. Assess recruitment difficulty. Execution Steps: Step 1: Scrape job site data; Step 2: Analyze position supply-demand ratio; Step 3: Generate market report. Supply-Demand Analysis: Position demand statistics, talent supply analysis, supply-demand ratio calculation Salary Research: Salary level distribution, growth trend analysis, regional difference comparison Difficulty Assessment: Recruitment cycle prediction, competition intensity, scarce skill identification
+Example 2: Resume Intelligent Screening Intent Recognition: User says: "Help me screen suitable candidates." Intent: Resume intelligent matching. Task Decomposition: 1. Parse job requirements; 2. Analyze candidate resumes; 3. Calculate match scores. Execution Steps: Step 1: Extract key skill terms; Step 2: Resume text analysis; Step 3: Output match ranking. Requirement Parsing: Skill requirement extraction, experience requirement quantification, soft skill identification Resume Analysis: Skill match calculation, experience relevance assessment, career stability analysis Match Scoring: Comprehensive match ranking, pros/cons comparison analysis, interview recommendation output
+Example 3: Interviewer Performance Evaluation Intent Recognition: User says: "Evaluate interviewer quality." Intent: Interview quality analysis. Task Decomposition: 1. Collect interview data; 2. Analyze evaluation standards; 3. Output improvement suggestions. Execution Steps: Step 1: Organize interview records; Step 2: Calculate evaluation metrics; Step 3: Generate feedback report. Efficiency Analysis: Interview pass rate statistics, decision consistency assessment, time efficiency analysis Quality Assessment: Evaluation standard consistency, prediction accuracy verification, candidate feedback collection Improvement Suggestions: Interview skill training, evaluation standard optimization, process improvement plans
+
+
+Key Metrics
+Calculation Formulas: Recruitment Completion Rate = Actual Hires / Required Hires × 100%; Interview Pass Rate = Passed Interviews / Total Interviews × 100%; Offer Acceptance Rate = Accepted Offers / Issued Offers × 100%; Average Recruitment Cycle = Average Days from Posting to Hire
+Evaluation Criteria: Completion Rate >90% Indicates Efficiency; Cycle <45 Days Indicates Speed
+Business Meanings: Assess Recruitment Quality and Cost Control
+Evaluation Standards
+Efficiency Metrics: Recruitment Cycle, Interview Pass Rate, Offer Acceptance Rate
+Quality Metrics: New Employee Performance, Probation Pass Rate, One-Year Retention Rate
+Cost Metrics: Per Position Recruitment Cost, Channel ROI, Time Costs
+Tool Ecosystem
+Global Tools: LinkedIn Recruiter, Indeed, Glassdoor, Workday, BambooHR China Tools: Zhaopin, BOSS Zhipin, Liepin, 51Job, Beisen Recruitment
+
+7. Healthcare
+Core Concepts
+Basic Terms: Medical Records, Diagnosis, Prescriptions, Examinations, Treatments, Nursing, Rehabilitation, Prevention, Patients, Admissions, Discharges Professional Terms: EMR, HIS, PACS, LIS, ICD Coding, DRGs, Clinical Pathways, Evidence-Based Medicine, EHR, HIPAA, Telemedicine Emerging Terms: Telemedicine, AI Diagnosis, Precision Medicine, Digital Therapeutics, Health Management, Medical Consortia, Health Analytics, AI-Powered Tools, Digital Therapeutics, Health Management
+Core Entities
+Primary Business Objects: Patient: Patient ID, Basic Info, Medical History, Allergies, Vital Signs, Treatment Records, Name, Diagnosis
+Doctor: Doctor ID, Department, Title, Specialty, Schedule, Permissions
+Prescription: Prescription Number, Patient ID, Doctor ID, Drugs, Dosage, Usage, Time
+Exam: Exam ID, Patient ID, Exam Items, Results, Reports, Abnormal Marks
+Treatment: Treatment ID, Type, Duration, Effects, Patient Responses
+Appointment: Appointment ID, Patient ID, Doctor ID, Time, Department, Status
+Related Objects: Equipment Records, Drug Inventories
+Attribute Definitions: Patient Attributes Include Medical History, Diagnosis; Prescription Attributes Include Dosage, Time
+Data Models
+Patient Data: Basic Info, Medical History Records, Allergies, Family History, Vital Signs
+Treatment Data: Symptom Descriptions, Exam Results, Diagnostic Conclusions, Treatment Plans, Medication Records
+Medical Resources: Doctor Schedules, Equipment Status, Bed Usage, Drug Inventories
+Quality Data: Medical Quality Indicators, Safety Events, Patient Satisfaction, Cost Controls
+Relational Models: Patients → Appointments (One-to-Many), Patients → Prescriptions (One-to-Many)
+Work Scenarios
+Outpatient Treatment: Patient Reception, Medical History Inquiry, Physical Exams, Diagnosis and Prescribing
+Inpatient Management: Admission Assessments, Treatment Plans, Nursing Implementation, Discharge Arrangements
+Examinations and Tests: Item Applications, Sample Collections, Result Reports, Abnormality Handling
+Pharmacy Management: Prescription Reviews, Medication Guidance, Adverse Reaction Monitoring, Inventory Management
+Remote Consultations: Video Diagnosis, Online Prescriptions
+Decision Logic
+Triage Rules: Symptoms + Vital Signs + Age + Past History Comprehensive Judgment
+Medication Safety: Drug Interactions + Allergies + Renal/Liver Function + Age/Weight
+Exam Necessity: Clinical Indications + Cost-Benefit + Patient Willingness + Resource Availability
+Referral Standards: Disease Complexity + Department Capabilities + Equipment Conditions + Expert Resources
+AI Assistance: Symptom Matching Diagnosis, Predict Complications
+Role Permissions
+Doctor: Diagnostic Permissions, Prescription Permissions, Order Issuance, Medical Record Writing
+Nurse: Order Execution, Nursing Records, Vital Signs Monitoring, Patient Education
+Pharmacist: Prescription Reviews, Medication Consultations, Drug Management, Adverse Reaction Monitoring
+Technician: Exam Operations, Equipment Maintenance, Quality Control, Report Reviews
+Exception Handling
+Medical Incidents: Immediate Rescue, Reporting Processes, Investigation Analysis, Improvement Measures
+Drug Adverse Reactions: Discontinue Medication, Symptomatic Treatment, Report to Regulators, Record in Medical History
+Equipment Failures: Backup Equipment, Repair Processes, Exam Delays, Patient Notifications
+Nosocomial Infections: Isolation Control, Epidemiological Investigations, Disinfection Handling, Prevention Measures
+Data Privacy Breaches: Encryption Audits, Report to Regulators
+Domain-Specific Examples
+Example 1: Medical Resource Allocation Intent Recognition: User says: "Optimize medical resource allocation." Intent: Resource allocation optimization. Task Decomposition: 1. Analyze resource usage; 2. Predict demand changes; 3. Develop allocation plan. Execution Steps: Step 1: Collect resource usage data; Step 2: Analyze demand patterns; Step 3: Output allocation recommendations. Usage Analysis: Equipment utilization statistics, bed turnover rate analysis, medical staff workload assessment Demand Forecasting: Patient flow prediction, seasonal variation analysis, emergency response planning Allocation Optimization: Resource reallocation plans, cost-benefit analysis, service quality assurance
+Example 2: Pharmacy Management Optimization Intent Recognition: User says: "Optimize pharmaceutical inventory management." Intent: Pharmacy inventory optimization. Task Decomposition: 1. Analyze medication data; 2. Forecast demand; 3. Develop procurement plan. Execution Steps: Step 1: Count medication usage; Step 2: Analyze seasonal patterns; Step 3: Generate procurement recommendations. Usage Analysis: Medication consumption statistics, usage frequency ranking, expiration risk assessment Demand Forecasting: Medication volume trend analysis, new drug demand assessment, emergency reserve calculation Procurement Optimization: Optimal order quantity calculation, supplier evaluation, cost control plans
+Example 3: Patient Satisfaction Improvement Intent Recognition: User says: "Improve patient satisfaction." Intent: Service quality improvement. Task Decomposition: 1. Collect patient feedback; 2. Analyze dissatisfaction factors; 3. Develop improvement measures. Execution Steps: Step 1: Organize satisfaction surveys; Step 2: Identify key issues; Step 3: Output improvement plans. Feedback Analysis: Satisfaction score statistics, complaint type analysis, improvement need identification Problem Diagnosis: Service process mapping, pain point identification, improvement priority ranking Improvement Plans: Service process optimization, training plan development, facility improvement suggestions
+
+
+Key Metrics
+Calculation Formulas: Cure Improvement Rate = Cured/Improved Patients / Total Discharged × 100%; Average Hospital Stay = Total Hospital Days / Discharged Patients; Bed Usage Rate = Actual Occupied Bed Days / Open Bed Days × 100%; Drug Adverse Reaction Rate = Adverse Cases / Total Medication Cases × 100%
+Evaluation Criteria: Improvement Rate >90% Indicates Excellence; Hospital Stay <10 Indicates Efficiency
+Business Meanings: Assess Medical Quality and Resource Efficiency
+Evaluation Standards
+Medical Quality: Cure Improvement Rate, Complication Incidence, Average Hospital Stay
+Safety Metrics: Medical Incident Rate, Drug Adverse Reaction Rate, Nosocomial Infection Control Rate
+Efficiency Metrics: Bed Usage Rate, Equipment Utilization Rate, Doctor Work Efficiency
+Tool Ecosystem
+Global Tools: Epic, Cerner, Allscripts, GE Healthcare, Philips HealthSuite China Tools: Neusoft HIS, Weining Health, Chuangye Software, Lianying Medical, Donghua Medical
+
+8. Finance & Accounting
+Core Concepts
+Basic Terms: Assets, Liabilities, Equity, Income, Costs, Expenses, Profits, Cash Flows, Debits, Credits, Expenditures Professional Terms: Accounting Subjects, Debit-Credit Bookkeeping, Financial Statements, Cost Accounting, Budget Management, Internal Controls, Accounting Standards (e.g., IFRS) Emerging Terms: Financial Sharing, Business-Finance Integration, Digital Finance, Intelligent Finance, Finance BP, RPA Applications, Blockchain Accounting, AI Auditing, Sustainable Reporting, AI Integration, Cloud Accounting, ESG Reporting
+Core Entities
+Primary Business Objects: Account: Account Code, Name, Type, Balance Direction, Levels
+Voucher: Voucher Number, Date, Summary, Debit Amount, Credit Amount, Preparer
+Invoice: Invoice Number, Issue Date, Amount, Tax Amount, Supplier, Type
+Budget: Budget Subject, Budget Amount, Executed Amount, Variance, Department, Period
+Related Objects: Fund Plans, Cost Centers
+Attribute Definitions: Account Attributes Include Type, Direction; Voucher Attributes Include Amounts, Dates
+Data Models
+Accounting Data: Subject Balances, Voucher Records, Auxiliary Accounting, Multi-Dimensional Analysis
+Fund Data: Bank Flows, Cash Plans, Fund Aggregation, Investment Management
+Cost Data: Direct Materials, Direct Labor, Manufacturing Expenses, Cost Center Allocation
+Budget Data: Budget Preparation, Execution Monitoring, Variance Analysis, Rolling Forecasts
+Relational Models: Accounts → Vouchers (One-to-Many), Budgets → Departments (One-to-Many)
+Work Scenarios
+Daily Accounting: Voucher Entry, Account Processing, Period-End Closing, Report Preparation
+Fund Management: Receipts/Payments, Bank Reconciliations, Fund Plans, Risk Controls
+Cost Management: Cost Accounting, Variance Analysis, Cost Controls, Performance Evaluations
+Budget Management: Budget Preparation, Approval Processes, Execution Monitoring, Assessment Evaluations
+Tax Compliance: Automated Declarations, Risk Assessments
+Decision Logic
+Expense Approvals: Amount Ranges + Expense Categories + Department Budget Balances Auto Judgment
+Payment Priorities: Contract Agreements + Fund Plans + Supplier Importance Sorting
+Risk Alerts: Accounts Receivable Aging + Customer Credit + Payment Probability Comprehensive Assessment
+Investment Decisions: NPV + IRR + Payback Period + Risk Factor Comprehensive Analysis
+AI Assistance: Automated Report Generation, Anomaly Detection
+Role Permissions
+Cashier: Cash Receipts/Payments, Banking, Fund Reports, Bill Management
+Accountant: Voucher Processing, Account Reconciliations, Report Preparation, Tax Declarations
+Finance Supervisor: Budget Management, Cost Analysis, Financial Analysis, Internal Control Supervision
+Finance Director: Financial Strategy, Investment/Financing Decisions, Risk Controls, Performance Evaluations
+Exception Handling
+Accounting Errors: Red Ink Reversals, Correct Entries, Cause Analysis, Process Improvements
+Fund Shortages: Financing Arrangements, Payment Delays, Priority Adjustments, Risk Controls
+Tax Risks: Policy Updates, Compliance Checks, Supplementary Payments, Professional Consultations
+Audit Findings: Issue Rectifications, System Improvements, Accountability, Prevention Measures
+System Integration Failures: Manual Backups, Log Analysis
+Domain-Specific Examples
+Example 1: Cash Flow Management Intent Recognition: User says: "Analyze cash flow situation." Intent: Cash flow analysis optimization. Task Decomposition: 1. Collect fund data; 2. Analyze flow structure; 3. Forecast funding needs. Execution Steps: Step 1: Organize income/expense details; Step 2: Calculate cash flow indicators; Step 3: Output funding plans. Flow Analysis: Operating cash flow statistics, investing cash flow analysis, financing cash flow assessment Structure Assessment: Revenue source diversity, expense rationality analysis, seasonal fluctuation identification Forecasting Planning: Future funding need prediction, funding gap identification, financing plan development
+Example 2: Cost Control Analysis Intent Recognition: User says: "Control operational costs." Intent: Cost optimization management. Task Decomposition: 1. Analyze cost structure; 2. Identify savings opportunities; 3. Develop control measures. Execution Steps: Step 1: Break down cost details; Step 2: Compare industry benchmarks; Step 3: Output optimization plans. Cost Analysis: Fixed vs variable cost separation, cost center performance evaluation, unit cost trends Benchmark Analysis: Industry cost level comparison, peer enterprise benchmark analysis, best practice identification Optimization Plans: Cost reduction recommendations, process improvement measures, supplier optimization strategies
+Example 3: Investment Decision Support Intent Recognition: User says: "Evaluate this investment project." Intent: Investment project evaluation. Task Decomposition: 1. Collect project information; 2. Conduct financial modeling; 3. Output decision recommendations. Execution Steps: Step 1: Organize project data; Step 2: Build financial models; Step 3: Generate evaluation report. Project Analysis: Investment scale assessment, revenue forecast analysis, risk factor identification Financial Modeling: NPV calculation, IRR analysis, sensitivity testing, scenario analysis Decision Support: Investment recommendation output, risk warning explanations, monitoring indicator setting
+
+
+Key Metrics
+Calculation Formulas: Budget Execution Rate = Actual Expenditure / Budget Amount × 100%; Fund Turnover Rate = Sales Revenue / Average Fund Occupancy; Cost Expense Rate = Total Cost Expenses / Operating Revenue × 100%; Accounts Receivable Turnover Days = Average Accounts Receivable / Daily Average Sales Revenue
+Evaluation Criteria: Execution Rate >95% Indicates Excellence; Turnover Rate >2 Indicates Efficiency
+Business Meanings: Assess Financial Stability and Operational Efficiency
+Evaluation Standards
+Accounting Quality: Account Accuracy, Report Timeliness, Error Rate Control
+Fund Efficiency: Turnover Rate, Utilization Efficiency, Financing Costs, Investment Returns
+Management Effects: Budget Execution Rate, Cost Control Rate, Expense Savings Rate
+Tool Ecosystem
+Global Tools: SAP, Oracle Financials, QuickBooks, Xero, NetSuite China Tools: UFIDA, Kingdee, Langchao, Hangtian Information, Baiwang Tax Control, Yun Tianfu, Bailian Alliance
+
