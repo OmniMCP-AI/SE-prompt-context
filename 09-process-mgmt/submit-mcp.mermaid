@@ -1,0 +1,49 @@
+flowchart TD
+    A[Developer Submits MCP Tool] --> B{Submission Format Valid?}
+    B -->|No| C[Return with Format Requirements]
+    B -->|Yes| D[Auto Extract Tool Metadata]
+    
+    D --> E[Conflict Detection Check]
+    E --> F{Conflicts with Featured Tools?}
+    
+    F -->|Yes| G[Conflict Resolution Analysis]
+    G --> H{Featured Tool Superior?}
+    H -->|Yes| I[Mark as Alternative/Reject]
+    H -->|No| J[Flag for Manual Review]
+    
+    
+    F-->|Yes| N[Functionality Testing]
+    
+    N --> O{Tests Pass?}
+    O -->|No| P[Testing Rejection with Logs]
+    O -->|Yes| Q[Quality Assessment]
+    
+    Q --> R{Meets Quality Standards?}
+    R -->|No| S[Quality Rejection with Feedback]
+    R -->|Yes| T[Human Review Queue]
+    
+    T --> U[Admin Manual Review]
+    U --> V{Admin Approval?}
+    V -->|No| W[Manual Rejection with Reason]
+    V -->|Yes| X[Add to Tool Registry]
+    
+    X --> Y[Set Tool Priority & Tags]
+    Y --> Z[Notify Developer - Approved]
+    
+    I --> AA[Notify Developer - Alternative Status]
+    J --> U
+    C --> BB[Developer Resubmits]
+   
+    P --> CC
+    S --> CC
+    W --> CC
+    BB --> B
+    CC --> B
+    
+    style A fill:#e1f5fe
+    style Z fill:#c8e6c9
+    style AA fill:#fff3e0
+    style M fill:#ffebee
+    style P fill:#ffebee
+    style S fill:#ffebee
+    style W fill:#ffebee
