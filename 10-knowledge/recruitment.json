@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+        "domain":"recruitment",
+      "title": "Talent Market Analysis",
+      "queries": [
+        "recruitment talent market research",
+        "talent supply-demand analysis",
+        "salary trend analysis",
+        "recruitment difficulty assessment",
+        "scarce skill identification"
+      ],
+      "content": "### Talent Market Analysis\n*Example Case: Analyze Current Talent Market Conditions*\n\n#### Intent Recognition\n- User says: \"Analyze current talent market conditions.\"\n- Intent: Talent market research\n\n#### Task Decomposition\n1. Collect market data\n2. Analyze supply-demand relationship\n3. Assess recruitment difficulty\n\n#### Execution Steps\n- Step 1: Scrape job site data\n- Step 2: Analyze position supply-demand ratio\n- Step 3: Generate market report\n\n#### Supply-Demand Analysis\n- Position demand statistics\n- Talent supply analysis\n- Supply-demand ratio calculation\n\n#### Salary Research\n- Salary level distribution\n- Growth trend analysis\n- Regional difference comparison\n\n#### Difficulty Assessment\n- Recruitment cycle prediction\n- Competition intensity\n- Scarce skill identification"
+    },
+    {
+      "domain":"recruitment",
+      "title": "Resume Intelligent Screening",
+      "queries": [
+        "resume screening automation",
+        "candidate skill matching",
+        "resume analysis for recruitment",
+        "candidate match scoring",
+        "interview recommendation system"
+      ],
+      "content": "### Resume Intelligent Screening\n*Example Case: Help Me Screen Suitable Candidates*\n\n#### Intent Recognition\n- User says: \"Help me screen suitable candidates.\"\n- Intent: Resume intelligent matching\n\n#### Task Decomposition\n1. Parse job requirements\n2. Analyze candidate resumes\n3. Calculate match scores\n\n#### Execution Steps\n- Step 1: Extract key skill terms\n- Step 2: Resume text analysis\n- Step 3: Output match ranking\n\n#### Requirement Parsing\n- Skill requirement extraction\n- Experience requirement quantification\n- Soft skill identification\n\n#### Resume Analysis\n- Skill match calculation\n- Experience relevance assessment\n- Career stability analysis\n\n#### Match Scoring\n- Comprehensive match ranking\n- Pros/cons comparison analysis\n- Interview recommendation output"
+    },
+    {
+      "domain":"recruitment",
+      "title": "Interviewer Performance Evaluation",
+      "queries": [
+        "interviewer quality analysis",
+        "interview efficiency metrics",
+        "evaluation standard consistency",
+        "candidate feedback analysis",
+        "interview process improvement"
+      ],
+      "content": "### Interviewer Performance Evaluation\n*Example Case: Evaluate Interviewer Quality*\n\n#### Intent Recognition\n- User says: \"Evaluate interviewer quality.\"\n- Intent: Interview quality analysis\n\n#### Task Decomposition\n1. Collect interview data\n2. Analyze evaluation standards\n3. Output improvement suggestions\n\n#### Execution Steps\n- Step 1: Organize interview records\n- Step 2: Calculate evaluation metrics\n- Step 3: Generate feedback report\n\n#### Efficiency Analysis\n- Interview pass rate statistics\n- Decision consistency assessment\n- Time efficiency analysis\n\n#### Quality Assessment\n- Evaluation standard consistency\n- Prediction accuracy verification\n- Candidate feedback collection\n\n#### Improvement Suggestions\n- Interview skill training\n- Evaluation standard optimization\n- Process improvement plans"
+    }
+  ]
+}

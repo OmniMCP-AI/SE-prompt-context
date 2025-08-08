@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "domain": "finance",
+      "title": "Equity Market Trend Tracking",
+      "queries": [
+        "stock market intelligence gathering",
+        "tech stock trends",
+        "market sentiment analysis",
+        "emerging stock sectors",
+        "financial news summary"
+      ],
+      "content": "### Equity Market Intelligence Gathering\n*Example Case: Today's Tech Stock Trends*\n\n#### News Summary\n- Identify main trending topics and significant events in the stock market\n- Track major stock price movements (e.g., AAPL, MSFT, TSLA, and other key stocks)\n- Analyze market sentiment through investor surveys and news sentiment analysis\n- Highlight emerging sectors and investment opportunities (e.g., AI, renewable energy)\n- Categorize and summarize financial news from sources like Bloomberg, Reuters, and CNBC"
+    },
+    {
+      "domain": "finance",
+      "title": "Stock Policy Event Impact Analysis",
+      "queries": [
+        "macroeconomic stock analysis",
+        "federal reserve impact on stocks",
+        "market sentiment monitoring",
+        "event-driven stock analysis",
+        "multi-cycle stock trends"
+      ],
+      "content": "### Policy Event Impact Analysis\n*Example Case: Federal Reserve Interest Rate Decision Interpretation*\n\n#### Macroeconomic Environment Scanning\n- Analyze global economic indicators (e.g., interest rates, GDP growth, inflation data) and their impact on stock markets\n- Track regulatory policies (e.g., SEC regulations, tax policy changes across countries)\n\n#### Market Sentiment Monitoring\n- Utilize the CBOE Volatility Index (VIX) as a fear gauge\n- Apply social media sentiment analysis tools (e.g., StockTwits, Twitter/X mentions)\n- Monitor institutional investor activities (e.g., 13F filings, insider trading data)\n\n#### Event-Driven Analysis\n- Break down breaking news (e.g., Federal Reserve announcements, geopolitical events) and their short-term market impacts\n- **Combine technical analysis with fundamental data**\n  - Identify key support/resistance levels and trading volume changes\n  - Validate with fundamental indicators (e.g., P/E ratio, EPS growth)\n\n#### Multi-Cycle Trend Assessment\n- Short-term (1D-1W): Focus on daily trading volume and options market activity\n- Medium to long-term (1M+): Incorporate economic cycles and institutional investment trends"
+    },
+    {
+      "domain": "finance",
+      "title": "Stock Analysis",
+      "queries": [
+        "stock technical analysis",
+        "stock fundamental analysis",
+        "institutional ownership tracking",
+        "social sentiment indicators",
+        "stock risk analysis"
+      ],
+      "content": "### Stock Price and Market Analysis\n*Example Cases: Why TSLA Crashed, AAPL 1-12 Month Perspective, AMZN vs GOOGL Performance*\n\n#### Stock Basic Information\n- Company basic information: official website, annual reports, SEC filings\n- Financial metrics: market cap, P/E ratio, dividend yield, EPS, revenue growth\n\n#### Stock Market Data Analysis\n- Price, trading volume, market capitalization\n- Technical analysis: candlestick chart patterns, moving averages, RSI\n\n#### Institutional and Insider Data Analysis\n- Institutional ownership: track major shareholders (e.g., Vanguard, BlackRock)\n- Insider trading activity: monitor buying/selling by company executives\n- Short interest and borrow rates analysis\n\n#### Social Sentiment Indicators\n- Social media activity (e.g., Twitter/X discussion volume, Reddit mentions)\n- Sentiment analysis from investor communities (e.g., Seeking Alpha, Motley Fool)\n\n#### Stock Risk Indicator Analysis\n- Volatility risk: beta coefficient analysis\n- Financial health: debt-to-equity ratio, cash flow analysis\n- Sector-specific risks: regulatory changes, competitive pressures"
+    },
+    {
+      "domain": "finance",
+      "title": "Detailed Company Analysis",
+      "queries": [
+        "stock fundamental analysis",
+        "company revenue model",
+        "institutional investor analysis",
+        "company sentiment analysis",
+        "corporate governance audit"
+      ],
+      "content": "### Detailed Company Analysis\n*Example Case: NVIDIA Corporation Research*\n\n#### Fundamental Analysis\n- Company basic information: official website, investor relations, SEC filings\n- Revenue model: sources of revenue (e.g., product sales, subscriptions), revenue growth trends\n\n#### Stock Analysis\n- Stock market data: price trends, trading volume, market cap\n- Financial metrics: P/E ratio, EPS, free cash flow, dividend policy\n- Liquidity analysis: trading volume, bid-ask spread\n\n#### Institutional and Market Data Verification\n- Company metrics: revenue, net income, EBITDA, and other financial data\n- Ownership data: institutional investor holdings, insider ownership\n- Fund flows: analyze institutional buying/selling using tools like Bloomberg Terminal, FactSet\n- Market share within the industry (e.g., NVIDIA’s share in the GPU market)\n\n#### Team and Capital Background\n- Executive team profiles: LinkedIn verification, track record\n- Backing from investment institutions: presence of top-tier funds (e.g., Fidelity, T. Rowe Price)\n\n#### Community and Public Sentiment\n- Website traffic: investor relations page visits\n- Company-related news: coverage in financial media\n- Community engagement: Twitter/X, Reddit, and investor forum activity\n- Sentiment keyword analysis (e.g., “earnings beat”, “lawsuit”)\n\n#### Technical and Governance Audit\n- Financial audit reports: reviews by firms like EY, PwC\n- Corporate governance: board structure, shareholder rights\n- ESG (Environmental, Social, Governance) performance analysis\n\n#### Company Valuation and Future Outlook\n- Company positioning: sector (e.g., tech, healthcare), problems solved, competitor comparison\n- Competitive advantage assessment: moat, innovation pipeline\n- Sector potential comparison: growth outlook for the industry"
+    }
+  ]
+}

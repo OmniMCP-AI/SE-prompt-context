@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "domain":"e-commerce",
+      "title": "Competitor Analysis",
+      "queries": [
+        "ecommerce competitor strategy analysis",
+        "competitor pricing trends",
+        "product feature comparison",
+        "marketing strategy analysis",
+        "brand positioning differences"
+      ],
+      "content": "### Competitor Analysis\n*Example Case: Analyzing Competitor Product Strategies*\n\n#### Intent Recognition\n- User says: \"Analyze competitor product strategies.\"\n- Intent: Competitive strategy analysis\n\n#### Task Decomposition\n1. Identify main competitors\n2. Collect competitor data\n3. Compare and analyze differences\n\n#### Execution Steps\n- Step 1: Scrape competitor information\n- Step 2: Organize pricing and feature data\n- Step 3: Generate comparison report\n\n#### Price Analysis\n- Competitor price ranges\n- Promotion frequency comparison\n- Pricing strategy trends\n\n#### Product Analysis\n- Feature comparison\n- User review analysis\n- Product iteration speed\n\n#### Marketing Analysis\n- Advertising strategies\n- Channel distribution comparison\n- Brand positioning differences"
+    },
+    {
+      "domain":"e-commerce",
+      "title": "Inventory Optimization",
+      "queries": [
+        "ecommerce inventory optimization",
+        "demand forecasting models",
+        "inventory turnover analysis",
+        "restocking strategy",
+        "seasonal trend analysis"
+      ],
+      "content": "### Inventory Optimization\n*Example Case: Optimize My Inventory Management*\n\n#### Intent Recognition\n- User says: \"Optimize my inventory management.\"\n- Intent: Inventory optimization analysis\n\n#### Task Decomposition\n1. Analyze sales data\n2. Forecast demand trends\n3. Develop restocking strategy\n\n#### Execution Steps\n- Step 1: Extract historical sales data\n- Step 2: Run demand forecasting models\n- Step 3: Output restocking recommendations\n\n#### Demand Forecasting\n- Seasonal trend analysis\n- Promotional impact assessment\n- New product demand prediction\n\n#### Inventory Analysis\n- Turnover rate calculation\n- Slow-moving item identification\n- Safety stock setting\n\n#### Restocking Strategy\n- Optimal order quantity calculation\n- Supplier lead time consideration\n- Cost-benefit analysis"
+    },
+    {
+      "domain":"e-commerce",
+      "title": "Customer Segmentation",
+      "queries": [
+        "ecommerce customer segmentation",
+        "RFM model analysis",
+        "customer behavior analysis",
+        "personalized marketing strategies",
+        "customer churn prediction"
+      ],
+      "content": "### Customer Segmentation\n*Example Case: Analyze Different Customer Segments' Value*\n\n#### Intent Recognition\n- User says: \"Analyze different customer segments' value.\"\n- Intent: Customer value analysis\n\n#### Task Decomposition\n1. Collect customer data\n2. Perform customer clustering\n3. Analyze segment characteristics\n\n#### Execution Steps\n- Step 1: Integrate customer behavior data\n- Step 2: Run clustering algorithms\n- Step 3: Generate customer personas\n\n#### Customer Segmentation\n- RFM model analysis\n- Lifecycle stage classification\n- Value contribution ranking\n\n#### Behavior Analysis\n- Purchase preference identification\n- Activity level assessment\n- Churn risk prediction\n\n#### Marketing Recommendations\n- Personalized recommendation strategies\n- Precision marketing plans\n- Customer retention programs"
+    }
+  ]
+}

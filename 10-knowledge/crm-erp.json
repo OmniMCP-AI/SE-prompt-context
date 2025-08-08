@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "domain": "crm-erp",
+      "title": "Sales Funnel Analysis",
+      "queries": [
+        "crm sales funnel optimization",
+        "sales conversion rate analysis",
+        "sales process bottlenecks",
+        "sales stage improvement",
+        "crm process recommendations"
+      ],
+      "content": "### Sales Funnel Analysis\n*Example Case: Analyze My Sales Conversion Situation*\n\n#### Intent Recognition\n- User says: \"Analyze my sales conversion situation.\"\n- Intent: Sales funnel optimization\n\n#### Task Decomposition\n1. Map sales process\n2. Calculate stage conversion rates\n3. Identify bottleneck stages\n\n#### Execution Steps\n- Step 1: Extract sales stage data\n- Step 2: Calculate conversion rates\n- Step 3: Locate problem areas\n\n#### Process Analysis\n- Stage duration time\n- Conversion rate trend changes\n- Loss reason statistics\n\n#### Bottleneck Identification\n- Lowest conversion rate stages\n- Abnormal loss point analysis\n- Improvement opportunity assessment\n\n#### Optimization Recommendations\n- Process improvement plans\n- Training needs identification\n- Tool support suggestions"
+    },
+    {
+      "domain": "crm-erp",
+      "title": "Customer Churn Prediction",
+      "queries": [
+        "crm customer churn prediction",
+        "customer behavior analysis",
+        "churn risk assessment",
+        "retention strategy recommendations",
+        "customer interaction trends"
+      ],
+      "content": "### Customer Churn Prediction\n*Example Case: Predict Which Customers Might Churn*\n\n#### Intent Recognition\n- User says: \"Predict which customers might churn.\"\n- Intent: Customer churn prediction\n\n#### Task Decomposition\n1. Analyze customer behavior\n2. Build prediction model\n3. Output risk list\n\n#### Execution Steps\n- Step 1: Collect customer interaction data\n- Step 2: Run churn prediction algorithms\n- Step 3: Generate alert report\n\n#### Behavior Analysis\n- Interaction frequency decline\n- Purchase cycle extension\n- Complaint increase trends\n\n#### Risk Assessment\n- Churn probability scoring\n- Risk level classification\n- Time window prediction\n\n#### Retention Strategy\n- Personalized communication plans\n- Discount policy recommendations\n- Service improvement measures"
+    },
+    {
+      "domain": "crm-erp",
+      "title": "Sales Forecasting",
+      "queries": [
+        "erp sales forecasting",
+        "sales performance prediction",
+        "historical sales analysis",
+        "seasonal sales patterns",
+        "predictive modeling for sales"
+      ],
+      "content": "### Sales Forecasting\n*Example Case: Forecast Next Quarter's Sales Performance*\n\n#### Intent Recognition\n- User says: \"Forecast next quarter's sales performance.\"\n- Intent: Sales performance prediction\n\n#### Task Decomposition\n1. Collect historical data\n2. Analyze influencing factors\n3. Build prediction model\n\n#### Execution Steps\n- Step 1: Integrate multi-dimensional data\n- Step 2: Identify predictive variables\n- Step 3: Output forecast results\n\n#### Data Analysis\n- Historical performance trends\n- Seasonal pattern identification\n- External factor impacts\n\n#### Model Building\n- Time series analysis\n- Multiple regression modeling\n- Machine learning prediction\n\n#### Result Output\n- Forecast value ranges\n- Confidence level assessment\n- Risk factor alerts"
+    }
+  ]
+}

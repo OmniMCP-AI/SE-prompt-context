@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "domain":"social-media",
+      "title": "Competitor Account Monitoring",
+      "queries": [
+        "social media competitor analysis",
+        "competitor engagement trends",
+        "content strategy comparison",
+        "posting timing analysis",
+        "interaction strategy insights"
+      ],
+      "content": "### Competitor Account Monitoring\n*Example Case: Monitor Peer Account Performance*\n\n#### Intent Recognition\n- User says: \"Monitor peer account performance.\"\n- Intent: Competitor account analysis\n\n#### Task Decomposition\n1. Identify competitor accounts\n2. Collect operational data\n3. Compare and analyze strategies\n\n#### Execution Steps\n- Step 1: Scrape competitor content\n- Step 2: Analyze engagement data\n- Step 3: Summarize operational strategies\n\n#### Content Analysis\n- Publishing frequency comparison\n- Content type statistics\n- Viral content characteristics\n\n#### Data Comparison\n- Follower growth trends\n- Engagement rate changes\n- Reach effectiveness evaluation\n\n#### Strategic Insights\n- Topic direction summary\n- Posting timing analysis\n- Interaction strategy learning"
+    },
+    {
+      "domain":"social-media",
+      "title": "Trending Content Discovery",
+      "queries": [
+        "social media trending topics",
+        "viral content analysis",
+        "topic relevance scoring",
+        "content creation suggestions",
+        "optimal posting timing"
+      ],
+      "content": "### Trending Content Discovery\n*Example Case: Find Recent Trending Topics*\n\n#### Intent Recognition\n- User says: \"Find recent trending topics.\"\n- Intent: Hot content mining\n\n#### Task Decomposition\n1. Monitor trending lists\n2. Analyze topic heat\n3. Evaluate relevance\n\n#### Execution Steps\n- Step 1: Scrape platform trending topics\n- Step 2: Calculate topic heat index\n- Step 3: Match domain relevance\n\n#### Trend Monitoring\n- Real-time trending tracking\n- Topic heat trends\n- Viral path analysis\n\n#### Relevance Assessment\n- Domain relevance scoring\n- Creation difficulty assessment\n- Competition intensity\n\n#### Creation Suggestions\n- Angle entry recommendations\n- Content format suggestions\n- Optimal publishing timing"
+    },
+    {
+      "domain":"social-media",
+      "title": "Successful Creator Case Study",
+      "queries": [
+        "social media creator success analysis",
+        "content strategy patterns",
+        "creator growth trajectory",
+        "monetization model analysis",
+        "brand collaboration insights"
+      ],
+      "content": "### Successful Creator Case Study\n*Example Case: Study Successful Creators' Methods*\n\n#### Intent Recognition\n- User says: \"Study successful creators' methods.\"\n- Intent: Success case learning\n\n#### Task Decomposition\n1. Screen target creators\n2. Analyze success factors\n3. Extract replicable insights\n\n#### Execution Steps\n- Step 1: Identify top creators\n- Step 2: Analyze their content strategies\n- Step 3: Summarize success patterns\n\n#### Growth Trajectory\n- Follower growth history\n- Key milestone analysis\n- Breakthrough content identification\n\n#### Content Strategy\n- Topic pattern summary\n- Creative style analysis\n- Interaction method research\n\n#### Business Model\n- Monetization path analysis\n- Brand collaboration analysis\n- Revenue structure estimation"
+    },
+    {
+      "domain":"social-media",
+      "title": "Content Rewriting & Optimization",
+      "queries": [
+        "social media content rewriting",
+        "viral content optimization",
+        "content structure analysis",
+        "emotional trigger identification",
+        "personalized content creation"
+      ],
+      "content": "### Content Rewriting & Optimization\n*Example Case: Help Me Rewrite This Viral Content*\n\n#### Intent Recognition\n- User says: \"Help me rewrite this viral content.\"\n- Intent: Content rewriting creation\n\n#### Task Decomposition\n1. Analyze original content structure\n2. Extract core elements\n3. Recreate expression\n\n#### Execution Steps\n- Step 1: Parse content framework\n- Step 2: Identify viral elements\n- Step 3: Generate new version content\n\n#### Structure Analysis\n- Title pattern identification\n- Content logic mapping\n- Emotional trigger points\n\n#### Element Extraction\n- Core viewpoint summary\n- Expression technique identification\n- Interaction design analysis\n\n#### Creative Optimization\n- Alternative perspective expression\n- Personal style integration\n- Homogenization risk avoidance"
+    }
+  ]
+}
