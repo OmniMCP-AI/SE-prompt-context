@@ -16,15 +16,19 @@ flowchart TD
   end
     A1["Admin: Set MCP Server Active"] --> B1{"Server Exists in MongoDB?"}
     A4["Admin: Rename/Move Tools"] --> B4{"Source & Target Servers Exist?"}
-    A2["Admin: Set MCP Server Inactive"] --> B2{"Server Currently Active?"}
+    A2["Admin: Set MCP Server Disable"] --> B2{"Server Currently Disable?"}
     A3["Admin: Update Server Metadata"] --> B3{"Server Exists in MongoDB?"}
     A21["Admin: Set MCP tool Inactive"] --> B21{"tool Currently Active?"}
     A5["Admin: Set Tool as Featured"] --> B5{"Tool Success Rate > 90%?"}
+    A6["Admin: Continuous Health Monitoring"] --> FF{Health Check Pass?}
+    FF -->|Pass| EE["Nothing todo"]
+    FF -->|10 Failures| GG[Set Active: False]
+
     B1 -- No --> ERR1["Error: Server Not Found"]
     B1 -- Yes --> C1["Update Server Status: Disabled"]
     C1 --> FULLSYNC["Full Data Sync Pipeline"]
-    B2 -- No --> ERR2["Error: Server Already Inactive"]
-    B2 -- Yes --> C2["Update Server Status: DEACTIVATING"]
+    B2 -- No --> ERR2["Error: Server Already Disabled"]
+    B2 -- Yes --> C2["Update Server Status: Disabled"]
     
     C2 --> CLEANUP
     B3 -- No --> ERR3["Error: Server Not Found"]
