@@ -1,13 +1,13 @@
 flowchart TD
  subgraph SYNC1["🔄 Full Data Sync Pipeline"]
         S1A["Generate Tool Knowledge → MongoDB"]
-        S1B["Generate Tool Index → Qdrant"]
-        S1C["Update Cache → Redis"]
+        S1B["Update Cache → Redis"]
+        S1C["Generate Tool Index → Qdrant"]
   end
  subgraph SYNC2["🔄 Update Data Sync Pipeline"]
-        S2A["Update Metadata → MongoDB"]
-        S2B["Regenerate Index → Qdrant"]
-        S2C["Refresh Cache → Redis"]
+        S2A["Regenerate Index → Qdrant"]
+        S2B["Clear Cache → Redis"]
+        S2C["Update Metadata → MongoDB"]
   end
  subgraph CLEANUP["🧹 Cleanup Pipeline"]
         CL1["Remove Index → Qdrant"]
@@ -18,24 +18,30 @@ flowchart TD
     A4["Admin: Rename/Move Tools"] --> B4{"Source & Target Servers Exist?"}
     A2["Admin: Set MCP Server Inactive"] --> B2{"Server Currently Active?"}
     A3["Admin: Update Server Metadata"] --> B3{"Server Exists in MongoDB?"}
+    A21["Admin: Set MCP tool Inactive"] --> B21{"tool Currently Active?"}
     A5["Admin: Set Tool as Featured"] --> B5{"Tool Success Rate > 90%?"}
     B1 -- No --> ERR1["Error: Server Not Found"]
-    B1 -- Yes --> C1["Update Server Status: ACTIVATING"]
+    B1 -- Yes --> C1["Update Server Status: Disabled"]
     C1 --> FULLSYNC["Full Data Sync Pipeline"]
     B2 -- No --> ERR2["Error: Server Already Inactive"]
     B2 -- Yes --> C2["Update Server Status: DEACTIVATING"]
+    
     C2 --> CLEANUP
     B3 -- No --> ERR3["Error: Server Not Found"]
     B3 -- Yes --> C3["Update Server Metadata in MongoDB"]
     C3 --> UPDATESYNC["Update Data Sync Pipeline"]
     B4 -- No --> ERR4["Error: Server(s) Not Found"]
     B4 -- Yes --> C4["Update Tool Metadata in MongoDB"]
+
+    B21 -- No --> ERR21["Error: MCP Tool Already Inactive"]
+    B21 -- Yes --> C21["Update MCP Tool Status: Inactive"]
+      
     C4 --> FULLSYNC
     FULLSYNC --> G4["Update Related Agent Tools"] & SUCCESS1["Server Activated ✅"]
     G4 --> SUCCESS4["Tools Moved/Renamed ✅"]
     B5 -- No --> ERR5["Error: Success Rate &lt; 90%"]
     B5 -- Yes --> C5["Update Tool Priority in MongoDB"]
-    C5 --> UPDATESYNC
+    
     S1A --> S1B
     S1B --> S1C
     S2A --> S2B
@@ -88,5 +94,3 @@ flowchart TD
     classDef storage fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px,color:#7b1fa2
     classDef entry fill:#e8f5e8,stroke:#4caf50,stroke-width:3px,color:#2e7d32
     classDef pipeline fill:#f0f4ff,stroke:#3f51b5,stroke-width:2px,color:#303f9f
-
-
