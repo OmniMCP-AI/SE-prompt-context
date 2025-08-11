@@ -4,15 +4,18 @@ flowchart TD
     B -->|Yes| D[Set Status: SUBMITTED]
     
     D --> E[Auto Extract Tool Metadata]
-    E --> F[Conflict Detection Check]
-    F --> G{Conflicts with Featured Tools?}
+
+
+
     
-    G -->|Yes| H[Conflict Resolution Analysis]
-    H --> I{Featured Tool Superior?}
-    I -->|Yes| J[Mark as Alternative/Reject]
+    
+    
+     
+    G --> I{Featured Tool Superior?}
+    I -->|Yes| J[Mark as Alternative]
     I -->|No| K[Flag for Manual Review]
     
-    G -->|No| O[Functionality Testing]
+    E --> O[Functionality Testing]
     
     O --> P{Tests Pass?}
     P -->|No| Q[Testing Rejection with Logs]
@@ -22,31 +25,20 @@ flowchart TD
     S -->|No| T[Quality Rejection with Feedback]
     S -->|Yes| U[Set Status: REVIEWING]
     
-    U --> V[Human Review Queue]
-    V --> W[Admin Manual Review]
-    W --> X{Admin Approval?}
+    U --> G{Conflicts with Featured Tools?}
+     
+    K --> X{Admin Approval?}
     X -->|No| Y[Manual Rejection with Reason]
-    X -->|Yes| Z[Add to Tool Registry]
+    X -->|Yes| Z[Add to MCP Registry]
     
     J --> Z
-    Z --> BB[Set Tool Priority & Tags]
+    Z --> BB[Add MCP server process]
     BB --> CC[Set Status: ACTIVE]
     
-    %% Health Check Monitoring
-    CC --> EE[Continuous Health Monitoring]
-    EE --> FF{Health Check Pass?}
-    FF -->|Pass| EE
-    FF -->|10 Failures| GG[Set Status: INACTIVE]
-    
-    %% Admin Manual Inactive
-    CC --> HH[Admin Manual Control]
-    HH --> II{Admin Sets Inactive?}
-    II -->|Yes| JJ[Set Status: INACTIVE]
-    II -->|No| HH
-    
+   
     %% Status flows
    
-    K --> W
+    
     C --> MM[Developer Fixes & Resubmits]
     Q --> MM
     T --> MM
