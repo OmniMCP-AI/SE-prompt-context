@@ -17,6 +17,15 @@ Allow user chat with the app build by app builder (usually non-tech user)
 Private data support for context awareness
 Knowledge for crypto  specialize for crypto analysis/operation
 
+What is Maybe AI？
+
+Maybe AI is a business data workflow automation platform that lets prosumers describe their data needs in natural language and automatically handles the complete "acquire → analyze → act" business cycle, with intelligent solutions that learn and evolve with each use.
+
+Tagline: Data workflows, minus the work.
+
+中文版： Maybe AI 是业务数据工作流自动化平台，让用户用自然语言描述数据需求，自动完成"获取→分析→行动"的完整业务循环，智能方案会随着使用不断学习进化。
+
+
 Target user:
 20% are Builder mostly non-tech user
 80% are User: chat with those app already built by builder 
