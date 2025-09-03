@@ -21,15 +21,15 @@ sequenceDiagram
         B->>F: pong
     end
 
-    rect rgba(252,239,205,0.5)
+    rect rgb(252,239,205)
     Note over B,IS: 控制面（gRPC/HTTP）
     B->>RP: XADD requests {session_id, last_seq, prompt, meta}
     B->>IS: StartSession(session_id, last_seq, prompt, meta)
     IS->>RP: 读取/校验断点（XRANGE/XINFO）
     end
 
-    rect rgba(220,240,255,0.55)
-    Note over B,RP,RB,IS: 数据面（Redis Streams）
+    rect rgb(220,240,255)
+    Note over RP,RB: 数据面（Redis Streams）
     B->>RB: 主从/哨兵自动同步（无需业务显式写）
     IS->>LLM: 调用 LLM stream
 
