@@ -21,14 +21,11 @@ sequenceDiagram
         B->>F: pong
     end
 
-    rect rgb(252,239,205)
     Note over B,IS: 控制面（gRPC/HTTP）
     B->>RP: XADD requests {session_id, last_seq, prompt, meta}
     B->>IS: StartSession(session_id, last_seq, prompt, meta)
     IS->>RP: 读取/校验断点（XRANGE/XINFO）
-    end
 
-    rect rgb(220,240,255)
     Note over RP,RB: 数据面（Redis Streams）
     B->>RB: 主从/哨兵自动同步（无需业务显式写）
     IS->>LLM: 调用 LLM stream
@@ -39,7 +36,6 @@ sequenceDiagram
         IS->>RB: 异步复制（由 Redis 负责）
         B->>RP: XREADGROUP responses:{session_id} BLOCK 0
         B-->>F: WebSocket 推送 chunk
-    end
     end
 
     alt 断连恢复
