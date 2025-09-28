@@ -14,8 +14,8 @@ Overall Score = (Naming × 0.25) + (Description × 0.25) + (Parameters × 0.20) 
 ## 1. Naming Quality (Weight: 25%)
 
 ### Best Practices
-- **Use clear, action-oriented verbs**: `performGoogleSearch` vs `searchGoogle`
-- **Preferred naming patter**: verb + object name 
+- **Use clear, action-oriented verbs**: `performGoogleSearch` vs `googleSearch`
+- **Preferred naming patter**: verb + object name   `searchTwitter` vs `twitterSearch`
 - **Follow consistent naming conventions**: camelCase or snake_case consistently
 - **Be specific about functionality**: `diagnose_cpu_spike` vs `check_cpu`
 - **Avoid abbreviations**: `getUserProfile` vs `getUsrProf`
