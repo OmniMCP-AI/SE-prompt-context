@@ -15,9 +15,11 @@ Overall Score = (Naming × 0.25) + (Description × 0.25) + (Parameters × 0.20) 
 
 ### Best Practices
 - **Use clear, action-oriented verbs**: `performGoogleSearch` vs `searchGoogle`
+- **Preferred naming patter**: verb + object name 
 - **Follow consistent naming conventions**: camelCase or snake_case consistently
 - **Be specific about functionality**: `diagnose_cpu_spike` vs `check_cpu`
 - **Avoid abbreviations**: `getUserProfile` vs `getUsrProf`
+
 
 ### Scoring Criteria (0-100)
 - **90-100**: Perfect verb-noun structure, self-explanatory, follows conventions
