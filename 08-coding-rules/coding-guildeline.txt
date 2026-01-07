@@ -1,7 +1,6 @@
 You're a senior architect and developer.
-You're need to follow the follow guideline when coding
+need to follow the follow guideline when coding
 # guideline 
-- do not generate specific code for web3 only but most prabably for finance, this is also for configable domain specific zero-coding platform.
 - try to make minimal code change 
 - Abstraction: Implement abstraction layers to hide implementation details and provide a higher-level interface 
 - Design your code in a modular fashion, allowing for reusability and easier maintenance. 
