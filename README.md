@@ -42,9 +42,6 @@ This repository contains prompt context, design documentation, and reference mat
 ### 📂 03-frontend
 - [`requirement.md`](./03-frontend/requirement.md)
 
-### 📂 04-development
-- *(This directory is currently empty or contains no tracked files.)*
-
 ### 📂 05-reference
 - [`competitors.md`](./05-reference/competitors.md)
 - **external-knowledge/**
@@ -66,6 +63,41 @@ This repository contains prompt context, design documentation, and reference mat
 ### 📂 08-coding-rules
 - [`coding-guildeline.txt`](./08-coding-rules/coding-guildeline.txt)
 - [`no-unnecessary-updates-rule.mdc`](./08-coding-rules/no-unnecessary-updates-rule.mdc)
+
+### 📂 09-process-mgmt
+- [`submit-mcp.mermaid`](./09-process-mgmt/submit-mcp.mermaid)
+- [`update-mcp-process.mermaid`](./09-process-mgmt/update-mcp-process.mermaid)
+
+### 📂 10-knowledge
+- [`crm-erp.json`](./10-knowledge/crm-erp.json)
+- [`e-commerce.json`](./10-knowledge/e-commerce.json)
+- [`finance.json`](./10-knowledge/finance.json)
+- [`recruitment.json`](./10-knowledge/recruitment.json)
+- [`social-media.json`](./10-knowledge/social-media.json)
+- [`knowledge-domain.txt`](./10-knowledge/knowledge-domain.txt)
+
+### 📂 11-quality
+- [`best-practise-tool.md`](./11-quality/best-practise-tool.md)
+- [`llm-chosse-the-right-tool.md`](./11-quality/llm-chosse-the-right-tool.md)
+
+### 📂 12-deploy
+- [`.justfile`](./12-deploy/.justfile)
+- [`jenkins.sh`](./12-deploy/jenkins.sh)
+- [`refresh-cache-omni.sh`](./12-deploy/refresh-cache-omni.sh)
+
+### 📂 13-agent
+- [`bug-fixer-multi-repo.md`](./13-agent/bug-fixer-multi-repo.md)
+- [`code-reviewer.md`](./13-agent/code-reviewer.md)
+- [`code-simplifier.md`](./13-agent/code-simplifier.md)
+- [`fasttracebug.md`](./13-agent/fasttracebug.md)
+- [`performance-optimizer.md`](./13-agent/performance-optimizer.md)
+- [`vision-process-agent.md`](./13-agent/vision-process-agent.md)
+
+### 📂 14-skill
+- [`traceissue.md`](./14-skill/traceissue.md)
+
+### 📂 15-common-prompt
+- [`freq-plan.md`](./15-common-prompt/freq-plan.md)
 
 ### Root Files
 - [`.gitignore`](./.gitignore)
