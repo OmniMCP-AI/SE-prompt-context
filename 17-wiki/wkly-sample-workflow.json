@@ -1,0 +1,211 @@
+{
+  "id": "69e30a8f38a1e3d944878f61",
+  "title": "多店铺周数据统计",
+  "variables": [],
+  "objective": "按顺序执行指定的workflow：69817458b46547413203d36b -> 697c99735c435e0365a2056a ->697c32247504e1e6b0b85e95",
+  "flows": [
+    {
+      "id": "update_origin_weekly_data",
+      "description": "更新原始周数据",
+      "depends_on": [],
+      "input": null,
+      "operation": {
+        "type": "tool_call",
+        "tool": {
+          "id": "workflow_mcp__run_workflow",
+          "arguments": [
+            {
+              "name": "artifact_id",
+              "type": "predefined",
+              "value": "699d66e656c5f49281dc07f2",
+              "description": "第1个要执行的workflow ID"
+            },
+            {
+              "name": "variables",
+              "type": "predefined",
+              "value": [],
+              "description": "workflow执行所需的变量参数"
+            }
+          ]
+        }
+      },
+      "output": {
+        "id": "scalar:workflow_result1",
+        "type": "scalar"
+      }
+    },
+    {
+      "id": "get_main_sku",
+      "description": "获取大盘的主货号",
+      "depends_on": [
+        "update_origin_weekly_data"
+      ],
+      "input": null,
+      "operation": {
+        "type": "tool_call",
+        "tool": {
+          "id": "workflow_mcp__run_workflow",
+          "arguments": [
+            {
+              "name": "artifact_id",
+              "type": "predefined",
+              "value": "699ed2485905005a1efe8563",
+              "description": "第2个要执行的workflow ID"
+            },
+            {
+              "name": "variables",
+              "type": "predefined",
+              "value": [],
+              "description": "workflow执行所需的变量参数"
+            }
+          ]
+        }
+      },
+      "output": {
+        "id": "scalar:workflow_result2",
+        "type": "scalar"
+      }
+    },
+    {
+      "id": "calcu_weekly_data",
+      "description": "计算店铺相关周数据",
+      "depends_on": [
+        "get_main_sku"
+      ],
+      "input": null,
+      "operation": {
+        "type": "tool_call",
+        "tool": {
+          "id": "workflow_mcp__run_workflow",
+          "arguments": [
+            {
+              "name": "artifact_id",
+              "type": "predefined",
+              "value": "69ca4935f346358a5bcee49a",
+              "description": "第3个要执行的workflow ID"
+            },
+            {
+              "name": "variables",
+              "type": "predefined",
+              "value": [],
+              "description": "workflow执行所需的变量参数"
+            }
+          ]
+        }
+      },
+      "output": {
+        "id": "scalar:workflow_result3",
+        "type": "scalar"
+      }
+    },
+    {
+      "id": "calcu_linked_data",
+      "description": "计算team&category相关周数据",
+      "depends_on": [
+        "calcu_weekly_data"
+      ],
+      "input": null,
+      "operation": {
+        "type": "tool_call",
+        "tool": {
+          "id": "workflow_mcp__run_workflow",
+          "arguments": [
+            {
+              "name": "artifact_id",
+              "type": "predefined",
+              "value": "69c2a91a175471d3019c4466",
+              "description": "第4个要执行的workflow ID"
+            },
+            {
+              "name": "variables",
+              "type": "predefined",
+              "value": [],
+              "description": "workflow执行所需的变量参数"
+            }
+          ]
+        }
+      },
+      "output": {
+        "id": "scalar:workflow_result4",
+        "type": "scalar"
+      }
+    },
+    {
+      "id": "calcu_team_category_data",
+      "description": "计算team&category相关周数据",
+      "depends_on": [
+        "calcu_weekly_data"
+      ],
+      "input": null,
+      "operation": {
+        "type": "tool_call",
+        "tool": {
+          "id": "workflow_mcp__run_workflow",
+          "arguments": [
+            {
+              "name": "artifact_id",
+              "type": "predefined",
+              "value": "69ca4a13f346358a5bcee60d",
+              "description": "第4个要执行的workflow ID"
+            },
+            {
+              "name": "variables",
+              "type": "predefined",
+              "value": [],
+              "description": "workflow执行所需的变量参数"
+            }
+          ]
+        }
+      },
+      "output": {
+        "id": "scalar:workflow_result4",
+        "type": "scalar"
+      }
+    },
+    {
+      "id": "split_team_category_data",
+      "description": "分team计算category相关周数据",
+      "depends_on": [
+        "calcu_team_category_data"
+      ],
+      "input": null,
+      "operation": {
+        "type": "tool_call",
+        "tool": {
+          "id": "workflow_mcp__run_workflow",
+          "arguments": [
+            {
+              "name": "artifact_id",
+              "type": "predefined",
+              "value": "69a2917a1ee3f43a388c1853",
+              "description": "第5个要执行的workflow ID"
+            },
+            {
+              "name": "variables",
+              "type": "predefined",
+              "value": [],
+              "description": "workflow执行所需的变量参数"
+            }
+          ]
+        }
+      },
+      "output": {
+        "id": "scalar:workflow_result5",
+        "type": "scalar"
+      }
+    }
+  ],
+  "result_tables": [],
+  "output": [
+    "scalar:workflow_result1",
+    "scalar:workflow_result2",
+    "scalar:workflow_result3",
+    "scalar:workflow_result4",
+    "scalar:workflow_result5"
+  ],
+  "name": "七木-v5-多店铺周数据统计",
+  "task": "将 Split Team Category Data 改成 Calcu Team Category Data 之后在执行",
+  "description": "按顺序执行三个指定的workflow",
+  "publish_at": "2025-09-17T00:00:00",
+  "user_input": []
+}
