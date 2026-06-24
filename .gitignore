@@ -2,3 +2,4 @@
 personal
 .DS_Store
 *.log
+.gstack/
